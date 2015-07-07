@@ -1,0 +1,18 @@
+
+/* Start Sprite Master CSS */
+.facebook,.google-plus,.linkedin,.pinterest,.twitter,.you-tube,.facebook-hover,.google-plus-hover,.linkedin-hover,.pinterest-hover,.twitter-hover,.you-tube-hover,.quiero-mi-pelo-hover,.quiero-mi-pelo{display: inline-block;background-repeat: no-repeat;background-image: url('../img/sprite.png');}
+.facebook{background-position:0px 0px;width:35px;height:35px;}
+.google-plus{background-position:-35px 0px;width:35px;height:35px;}
+.linkedin{background-position:-70px 0px;width:35px;height:35px;}
+.pinterest{background-position:-105px 0px;width:35px;height:35px;}
+.twitter{background-position:-140px 0px;width:35px;height:35px;}
+.you-tube{background-position:-175px 0px;width:35px;height:35px;}
+.facebook:hover{background-position:-210px 0px;width:35px;height:35px;}
+.google-plus:hover{background-position:0px -35px;width:35px;height:35px;}
+.linkedin:hover{background-position:-35px -35px;width:35px;height:35px;}
+.pinterest:hover{background-position:-70px -35px;width:35px;height:35px;}
+.twitter:hover{background-position:-105px -35px;width:35px;height:35px;}
+.you-tube:hover{background-position:-140px -35px;width:35px;height:35px;}
+.quiero-mi-pelo:hover{background-position:0px -70px;width:160px;height:33px;}
+.quiero-mi-pelo{background-position:0px -103px;width:160px;height:33px;}
+/* End Sprite Master CSS */

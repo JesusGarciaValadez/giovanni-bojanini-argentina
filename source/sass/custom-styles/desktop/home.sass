@@ -1,0 +1,168 @@
+.gallery
+    display: block
+    height: 58.59375vw
+    overflow: hidden
+    position: absolute
+    top: 100px
+    width: 100%
+    z-index: 0
+    .flexisel
+        display: block
+        height: 100%
+        margin: 0px
+        overflow: hidden
+        padding: 0px
+        width: 100%
+        li
+            float: left
+            height: 100%
+            list-style: inside none none
+            padding: 0px
+            width: 100% !important
+            img
+                height: auto
+                width: 100%
+.title .central, .content .central, .contact .central
+    left: 5.5%
+    margin: 0
+    position: relative
+    width: 520px
+header
+    background-color: $footer-background
+    .central
+        height: 100px
+        h2
+            display: flex
+            flex-flow: stretch
+            float: left
+            height: 100%
+            margin: 0 auto
+            &:first-child
+                margin-left: 38px
+                width: 70px
+            &:last-child
+                margin-left: 25px
+                width: 282px
+            a
+                align-self: middle
+                position: relative
+                img
+                    position: relative
+                img[width="70"]
+                    top: ( 100px / 2 ) - ( 55px / 2 )
+                img[width="282"]
+                    top: ( 100px / 2 ) - ( 33px / 2 )
+.title
+    h1
+        margin: 40px 0 25px 70px
+        img
+.content
+    background-color: $content-background
+    box-sizing: border-box
+    padding: 15px 0
+    .central
+        p
+            @include font-mask( normal, em( 12, 16 ), 1em, $open-sans-condensed-light, $white-color )
+            margin: 15px auto
+        .features
+            display: flex
+            flex-flow: row nowrap
+            .left
+                padding-right: 25px
+                h3
+                    @include font-mask( normal, em( 17, 16 ), 1em, $open-sans-condensed-light, $title-color )
+                    margin: 0 auto
+                    text-transform: uppercase
+                p
+                ul
+                    margin: 0
+                    padding: 0 0 0 10px
+                    li
+                        color: $white-color
+                        margin: 0
+                        padding: 0
+                        p
+                            @include font-mask( normal, em( 12, 16 ), 1em, $open-sans-condensed-light, $white-color )
+            .right
+                border-left: 1px dashed $separator-color
+                display: flex
+                flex-flow: row nowrap
+                padding-left: 25px
+                h4
+                    align-self: center
+                    display: block
+                    margin: 0 auto
+                    img
+.contact
+    form
+        display: flex
+        flex-flow: row nowrap
+        float: left
+        margin: 26px 0 41px !important
+        width: 417px
+        fieldset
+            align-self: flex-start
+            margin: 0 auto
+            &:nth-child( 1 )
+                width: 217px
+            &:nth-child( 2 )
+                width: 303px
+            .input
+                &:nth-child( 0 ), &:nth-child( 1 )
+                    float: left
+                label
+                    float: left
+                    margin: 0 17px 17px 0
+                    width: 200px
+                    &[for="first_name"], &[for="last_name"]
+                        float: left
+                        width: 95px
+                    &[for="first_name"]
+                        margin-right: 10px
+                    &[for="message"]
+                        height: 120px
+                    input[type="text"], input[type="email"], textarea
+                        @include font-mask( normal, em( 13, 16 ), 1em, $open-sans-condensed-light, $white-color )
+                        background-color: $input-background
+                        border: 0 none transparent
+                        box-sizing: border-box
+                        color: $white-color
+                        margin: 0 auto
+                        padding: 5px
+                        width: 100%
+                    input[type="text"], input[type="email"]
+                        height: 28px
+                    textarea
+                        height: 100%
+                        resize: unset
+.quiero-mi-pelo
+    border: 0 none transparent
+    color: transparent
+    float: right
+    margin: 0 103px 0 0
+    padding: 0
+input[placeholder], textarea[placeholder]
+    color: $white-color
+    &::-moz-placeholder,&:-moz-placeholder,&::placeholder,&:placeholder
+        color: $white-color
+footer
+    background-color: $footer-background
+    .central
+        p
+            display: inline-block
+            float: left
+            margin: 24px 38px
+            img
+        ul
+            box-sizing: border-box
+            float: right
+            margin: 15px 30px
+            padding: 0
+            li
+                box-sizing: border-box
+                float: left
+                list-style: none inside
+                margin: 0 15px
+                padding: 0
+                a
+                    color: transparent

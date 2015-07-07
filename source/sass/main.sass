@@ -1,0 +1,80 @@
+@import "bourbon"
+@import "default-styles/_normalize"
+
+@import "default-styles/_boilerplate_styles"
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+@import "default-styles/_variables"
+@import "default-styles/_mixins"
+@import "default-styles/_lemonade"
+@import "default-styles/_general"
+@import "sprite/sprite"
+
+@import "custom-styles/desktop/home"
+
+@import "default-styles/_helper_classes"
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+/* ==========================================================================
+   iPhone 3GS/4/4S Portrait Orientation
+   ========================================================================== */
+@media only screen and (max-width: em( 480 ))
+
+/* ==========================================================================
+   iPhone 3GS/4/4S Landscape Orientation
+   ========================================================================== */
+@media only screen and (max-width: em( 480 )) and (orientation:landscape)
+
+/* ==========================================================================
+   iPhone 5/5S Portrait Orientation
+   ========================================================================== */
+@media only screen and (max-width: em( 568, 16 )) and (orientation:portrait)
+
+/* ==========================================================================
+   iPhone 5/5S Landscape Orientation
+   ========================================================================== */
+@media only screen and (max-width: em( 568, 16 )) and (orientation:landscape)
+
+/* ==========================================================================
+   iPhone 6 Orientation
+   ========================================================================== */
+@media only screen and (max-width: em( 667, 16 )) and (orientation:portrait)
+
+@media only screen and (max-width: em( 667, 16 )) and (orientation:landscape)
+
+/* ==========================================================================
+   iPhone 6 Plus Landscape Orientation
+   ========================================================================== */
+@media only screen and (max-width: em( 736, 16 ))
+
+@media only screen and (max-width: em( 736, 16 )) and (orientation:landscape)
+
+/* ==========================================================================
+   iPad
+   ========================================================================== */
+@media only screen and (max-width: em( 1024, 16 ))
+
+/* ==========================================================================
+   iPad Portrait Orientation
+   ========================================================================== */
+@media only screen and (max-width: em( 1024, 16 )) and (orientation:portrait)
+
+/* ==========================================================================
+   iPad Landscape Orientation
+   ========================================================================== */
+@media only screen and (max-width: em( 1024, 16 )) and (orientation:landscape)
+
+/* ==========================================================================
+   Desktop High Resolution
+   ========================================================================== */
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi)
+
+@media print
+    @import "default-styles/_print_stylesheet"

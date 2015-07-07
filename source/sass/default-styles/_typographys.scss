@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'Helvetica Neue Bold Condensed';
+    src: url('fonts/helvetica-neue/HelveticaNeueLTStd_BdCn.eot');
+    src: url('fonts/helvetica-neue/HelveticaNeueLTStd_BdCn.eot?#iefix') format('embedded-opentype'),
+         url('fonts/helvetica-neue/HelveticaNeueLTStd_BdCn.woff') format('woff'),
+         url('fonts/helvetica-neue/HelveticaNeueLTStd_BdCn.ttf') format('truetype'),
+         url('fonts/helvetica-neue/HelveticaNeueLTStd_BdCn.svg#Helvetica Neue Bold Condensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}//    Helvetica Neue Bold Condensed
+@font-face {
+    font-family: 'Helvetica Neue Black Condensed';
+    src: url('fonts/helvetica-neue/HelveticaNeueLTStd_BlkCn.eot');
+    src: url('fonts/helvetica-neue/HelveticaNeueLTStd_BlkCn.eot?#iefix') format('embedded-opentype'),
+         url('fonts/helvetica-neue/HelveticaNeueLTStd_BlkCn.woff') format('woff'),
+         url('fonts/helvetica-neue/HelveticaNeueLTStd_BlkCn.ttf') format('truetype'),
+         url('fonts/helvetica-neue/HelveticaNeueLTStd_BlkCn.svg#Helvetica Neue Black Condensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}//    Helvetica Neue Black Condensed
+@font-face {
+    font-family: 'Helvetica Neue Light Condensed';
+    src: url('fonts/helvetica-neue/HelveticaNeueLTStd_LtCn.eot');
+    src: url('fonts/helvetica-neue/HelveticaNeueLTStd_LtCn.eot?#iefix') format('embedded-opentype'),
+         url('fonts/helvetica-neue/HelveticaNeueLTStd_LtCn.woff') format('woff'),
+         url('fonts/helvetica-neue/HelveticaNeueLTStd_LtCn.ttf') format('truetype'),
+         url('fonts/helvetica-neue/HelveticaNeueLTStd_LtCn.svg#Helvetica Neue Light Condensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}//    Helvetica Neue Light Condensed
+@font-face {
+    font-family: 'Open Sans Condensed Light';
+    src: url('fonts/open-sans-condensed-light/OpenSans-CondLight-webfont.eot');
+    src: url('fonts/open-sans-condensed-light/OpenSans-CondLight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/open-sans-condensed-light/OpenSans-CondLight-webfont.woff') format('woff'),
+         url('fonts/open-sans-condensed-light/OpenSans-CondLight-webfont.ttf') format('truetype'),
+         url('fonts/open-sans-condensed-light/OpenSans-CondLight-webfont.svg#Open Sans Condensed Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}//    Open Sans Condensed Light
+@font-face {
+    font-family: 'Open Sans Condensed Bold';
+    src: url('fonts/open-sans-condensed-bold/OpenSans-CondBold-webfont.eot');
+    src: url('fonts/open-sans-condensed-bold/OpenSans-CondBold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/open-sans-condensed-bold/OpenSans-CondBold-webfont.woff') format('woff'),
+         url('fonts/open-sans-condensed-bold/OpenSans-CondBold-webfont.ttf') format('truetype'),
+         url('fonts/open-sans-condensed-bold/OpenSans-CondBold-webfont.svg#Open Sans Condensed Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}//    Open Sans Condensed Bold
+
+$helvetica:                        Helvetica,Arial,"sans-serif";
+$helvetica-neue-bold-condensed:    "Helvetica Neue Bold Condensed", #{$helvetica};
+$helvetica-neue-black-condensed:   "Helvetica Neue Black Condensed", #{$helvetica};
+$helvetica-neue-light-condensed:   "Helvetica Neue Light Condensed", #{$helvetica};
+$open-sans-condensed-light:        "Open Sans Condensed Light", #{$helvetica};
+$open-sans-condensed-bold:         "Open Sans Condensed Bold", #{$helvetica};
