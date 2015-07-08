@@ -29,16 +29,33 @@
 
     // } );
 
+    ( function () {
+        var app = angular.module( 'Bojanini', [] );
+
+        app.controller( 'ContactController', function() {
+            this.
+        } );
+    } )()
+
     //  When page is finished loaded
     $( document ).ready( function () {
-        $(".flexisel").flexisel({
-            visibleItems: 1,
-            animationSpeed: 150,
-            autoPlay: false,
-            autoPlaySpeed: 3000,
-            pauseOnHover: true,
-            clone:false,
-            enableResponsiveBreakpoints: no
-          });
+        if ( $( '.flexisel' ).exists() ) {
+            $( ".flexisel" ).flexisel( {
+                visibleItems: 1,
+                animationSpeed: 100,
+                autoPlay: true,
+                autoPlaySpeed: 6000,
+                pauseOnHover: false,
+                clone: true,
+                enableResponsiveBreakpoints: false
+            } );
+        }
+
+        if ( $( 'form' ).exists() ) {
+            if ( true ) {
+
+            }
+        }
     } );
+
 } ) ( jQuery, window, document );

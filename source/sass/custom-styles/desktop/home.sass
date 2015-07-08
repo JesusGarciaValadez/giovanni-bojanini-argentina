@@ -1,27 +1,60 @@
 .gallery
     display: block
-    height: 58.59375vw
+    height: 100vh
     overflow: hidden
     position: absolute
-    top: 100px
+    top: 0
     width: 100%
     z-index: 0
-    .flexisel
+    /*.flexisel
         display: block
         height: 100%
         margin: 0px
         overflow: hidden
         padding: 0px
-        width: 100%
+        width: 300vw
         li
             float: left
             height: 100%
             list-style: inside none none
             padding: 0px
-            width: 100% !important
+            width: 100vw !important
             img
                 height: auto
-                width: 100%
+                width: 100%*/
+.nbs-flexisel-container
+    position: relative
+    max-width: 100%
+    .nbs-flexisel-inner
+        background: #fcfcfc
+        background: #fcfcfc linear-gradient(top, #fcfcfc 0%, #eeeeee 100%)
+        border: 1px solid #ccc
+        border-radius: 5px
+        float: left
+        overflow: hidden
+        width: 100%
+        .nbs-flexisel-ul
+            list-style-type: none
+            margin: 0px
+            padding: 0px
+            position: relative
+            text-align: center
+            width: 9999px
+            .nbs-flexisel-item
+                cursor: pointer
+                float: left
+                line-height: 0px
+                margin: 0px
+                padding: 0px
+                position: relative
+                img
+                    cursor: pointer
+                    margin-top: 10px
+                    margin-bottom: 10px
+                    position: relative
+                    width: 100%
+.nbs-flexisel-nav-left, .nbs-flexisel-nav-right
+    display: none
 .title .central, .content .central, .contact .central
     left: 5.5%
     margin: 0
@@ -59,7 +92,7 @@ header
 .content
     background-color: $content-background
     box-sizing: border-box
-    padding: 15px 0
+    padding: 18px 0
     .central
         p
             @include font-mask( normal, em( 12, 16 ), 1em, $open-sans-condensed-light, $white-color )
@@ -129,6 +162,7 @@ header
                         color: $white-color
                         margin: 0 auto
                         padding: 5px
+                        text-align: left
                         width: 100%
                     input[type="text"], input[type="email"]
                         height: 28px

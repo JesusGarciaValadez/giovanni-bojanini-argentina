@@ -45,16 +45,37 @@
             </div>
         </section>
         <div class="wrapper contact">
-            <form action="" method="POST" class="central">
+            <form action="" method="POST" class="central" ngcontroller="ContactController as contact">
                 <fieldset class="clearfix">
-                    <div class="input clearfix"><label for="first_name"><input type="text" required="true" name="first_name" placeholder="Nombre"></label></div>
-                    <div class="input clearfix"><label for="last_name"><input type="text" required="true" name="last_name" placeholder="Apellido"></label></div>
-                    <div class="input clearfix"><label for="email"><input type="email" required="true" name="email" placeholder="Correo Electrónico"></label></div>
-                    <div class="input clearfix"><label for="city"><input type="text" required="true" name="city" placeholder="Ciudad"></label></div>
+                    <div class="input clearfix">
+                        <label for="first_name">
+                            <input type="text" required="true" name="first_name" placeholder="Nombre" ng-model="contact.first-name">
+                        </label>
+                    </div>
+                    <div class="input clearfix">
+                        <label for="last_name">
+                            <input type="text" required="true" name="last_name" placeholder="Apellido" ng-model="contact.last-name">
+                        </label>
+                    </div>
+                    <div class="input clearfix">
+                        <label for="email">
+                            <input type="email" required="true" name="email" placeholder="Correo Electrónico" ng-model="contact.email">
+                    </label></div>
+                    <div class="input clearfix">
+                        <label for="city">
+                            <input type="text" required="true" name="city" placeholder="Ciudad" ng-model="contact.city">
+                        </label>
+                    </div>
                 </fieldset>
                 <fieldset class="clearfix">
-                    <div class="input clearfix"><label for="message"><textarea name="message" id="" cols="30" rows="10" placeholder="Mensaje"></textarea></label></div>
-                    <div class="input"><button type="submit" class="quiero-mi-pelo">Quiero mi pelo</button></div>
+                    <div class="input clearfix">
+                        <label for="message">
+                            <textarea name="message" id="" cols="30" rows="10" placeholder="Mensaje" ng-model="contact.message"></textarea>
+                        </label>
+                    </div>
+                    <div class="input">
+                        <button type="submit" class="quiero-mi-pelo">Quiero mi pelo</button>
+                    </div>
                 </fieldset>
             </form>
         </div>
