@@ -45,16 +45,16 @@
             </div>
         </section>
         <div class="wrapper contact">
-            <form action="" method="POST" class="central" ngcontroller="ContactController as contact">
+            <form action="" method="POST" class="central" ng-controller="ContactController as contact">
                 <fieldset class="clearfix">
                     <div class="input clearfix">
                         <label for="first_name">
-                            <input type="text" required="true" name="first_name" placeholder="Nombre" ng-model="contact.first-name">
+                            <input type="text" required="true" name="first_name" placeholder="Nombre" ng-model="contact.firstName" ng-change="contact.validateFirstName()">
                         </label>
                     </div>
                     <div class="input clearfix">
                         <label for="last_name">
-                            <input type="text" required="true" name="last_name" placeholder="Apellido" ng-model="contact.last-name">
+                            <input type="text" required="true" name="last_name" placeholder="Apellido" ng-model="contact.lastName">
                         </label>
                     </div>
                     <div class="input clearfix">
@@ -74,7 +74,7 @@
                         </label>
                     </div>
                     <div class="input">
-                        <button type="submit" class="quiero-mi-pelo">Quiero mi pelo</button>
+                        <button type="submit" class="quiero-mi-pelo" ng-if="!contact.valid">Quiero mi pelo</button>
                     </div>
                 </fieldset>
             </form>

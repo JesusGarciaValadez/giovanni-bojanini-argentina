@@ -21,9 +21,18 @@
     <body class="giovanni-bojanini">
         <section class="wrapper gallery clearfix">
             <ul class="clearfix flexisel">
-                <li><img src="http://localhost:5757/img/background-men.jpg" alt="Hombre"></li>
-                <li><img src="http://localhost:5757/img/background-women.jpg" alt="Mujer"></li>
-                <li><img src="http://localhost:5757/img/background-couple.jpg" alt="Pareja"></li>
+                <li>
+                    <img src="http://localhost:5757/img/background-men.jpg" alt="Hombre" class="desktop">
+                    <img src="http://localhost:5757/img/background-men-mobile.jpg" alt="Hombre" class="mobile">
+                </li>
+                <li>
+                    <img src="http://localhost:5757/img/background-women.jpg" alt="Mujer" class="desktop">
+                    <img src="http://localhost:5757/img/background-women-mobile.jpg" alt="Mujer" class="mobile">
+                </li>
+                <li>
+                    <img src="http://localhost:5757/img/background-couple.jpg" alt="Pareja" class="desktop">
+                    <img src="http://localhost:5757/img/background-couple-mobile.jpg" alt="Pareja" class="mobile">
+                </li>
             </ul>
         </section>
         <header class="wrapper">
@@ -68,16 +77,16 @@
             </div>
         </section>
         <div class="wrapper contact">
-            <form action="" method="POST" class="central" ngcontroller="ContactController as contact">
+            <form action="" method="POST" class="central" ng-controller="ContactController as contact">
                 <fieldset class="clearfix">
                     <div class="input clearfix">
                         <label for="first_name">
-                            <input type="text" required="true" name="first_name" placeholder="Nombre" ng-model="contact.first-name">
+                            <input type="text" required="true" name="first_name" placeholder="Nombre" ng-model="contact.firstName" ng-change="contact.validateFirstName()">
                         </label>
                     </div>
                     <div class="input clearfix">
                         <label for="last_name">
-                            <input type="text" required="true" name="last_name" placeholder="Apellido" ng-model="contact.last-name">
+                            <input type="text" required="true" name="last_name" placeholder="Apellido" ng-model="contact.lastName">
                         </label>
                     </div>
                     <div class="input clearfix">
@@ -97,13 +106,13 @@
                         </label>
                     </div>
                     <div class="input">
-                        <button type="submit" class="quiero-mi-pelo">Quiero mi pelo</button>
+                        <button type="submit" class="quiero-mi-pelo" ng-if="!contact.valid">Quiero mi pelo</button>
                     </div>
                 </fieldset>
             </form>
         </div>
         <footer class="wrapper">
-            <div class="central">
+            <div class="central clearfix">
                 <p><a href="https://www.giovannibojanini.ar/" target="_blank" title="www.giovannibojanini.ar"><img src="http://localhost:5757/img/giovanni-bojanini-argentina.png" alt="www.giovannibojanini.ar/"></a></p>
                 <ul class="clearfix">
                     <li class="facebook"><a href="" target="_blank">Facebook</a></li>
@@ -115,6 +124,5 @@
                 </ul>
             </div>
         </footer>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js" async></script>
         <script src="http://localhost:5757/js/main.min.js"></script>    </body>
 </html>
