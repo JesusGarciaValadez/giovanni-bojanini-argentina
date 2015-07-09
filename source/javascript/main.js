@@ -1,5 +1,4 @@
 //  @codekit-prepend "plugins.js";
-//  @codekit-prepend "scripts.js";
 /**
  *
  *  @function
@@ -30,10 +29,31 @@
     // } );
 
     ( function () {
-        var app = angular.module( 'Bojanini', [] );
+        var app = angular.module( 'BojaApp', [] );
 
         app.controller( 'ContactController', function() {
-            this.
+            var contact = this;
+            contact.firstName   = '';
+            contact.lastName    = '';
+            contact.email       = '';
+            contact.city        = '';
+            contact.valid       = false;
+
+            contact.validateFirstName = function ( value ) {
+                console.log( contact.firstName );
+            };
+
+            contact.validateLastName = function ( value ) {
+
+            };
+
+            contact.validateEmail = function ( value ) {
+
+            };
+
+            contact.validateCity = function ( value ) {
+
+            };
         } );
     } )()
 
@@ -51,10 +71,16 @@
             } );
         }
 
-        if ( $( 'form' ).exists() ) {
-            if ( true ) {
+        if ( $( '.nbs-flexisel-container' ).exists() ) {
+            $( '.nbs-flexisel-container' ).addClass( 'clearfix'  );
+        }
 
-            }
+        if ( $( '.gallery' ).exists() ) {
+            var _height = $( window ).innerHeight() + 'px';
+            $( 'window' ).on( 'resize', function ( e ) {
+                _height = $( window ).innerHeight() + 'px';position()
+                $( '.gallery' ).height( _height );
+            } );
         }
     } );
 

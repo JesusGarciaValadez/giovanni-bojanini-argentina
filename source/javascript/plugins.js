@@ -68,3 +68,4 @@ jQuery.fn.centerHeight      = function(){
 // Place any jQuery/helper plugins in here.
 // @codekit-prepend "vendor/jquery.js";
 // @codekit-append "vendor/jquery.flexisel.js";
+// @codekit-append "vendor/angular.js";
