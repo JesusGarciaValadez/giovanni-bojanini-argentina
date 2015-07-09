@@ -27,25 +27,22 @@
    ========================================================================== */
 @media only screen and (max-width: em( 480 ))
 
-/* ==========================================================================
-   iPhone 3GS/4/4S Landscape Orientation
-   ========================================================================== */
 @media only screen and (max-width: em( 480 )) and (orientation:landscape)
 
 /* ==========================================================================
    iPhone 5/5S Portrait Orientation
    ========================================================================== */
-@media only screen and (max-width: em( 568, 16 )) and (orientation:portrait)
+@media only screen and (max-width: em( 568, 16 ))
+    @import "default-styles/_general_mobile"
 
-/* ==========================================================================
-   iPhone 5/5S Landscape Orientation
-   ========================================================================== */
+    @import "custom-styles/mobile/home"
+
 @media only screen and (max-width: em( 568, 16 )) and (orientation:landscape)
 
 /* ==========================================================================
    iPhone 6 Orientation
    ========================================================================== */
-@media only screen and (max-width: em( 667, 16 )) and (orientation:portrait)
+@media only screen and (max-width: em( 667, 16 ))
 
 @media only screen and (max-width: em( 667, 16 )) and (orientation:landscape)
 
@@ -61,14 +58,6 @@
    ========================================================================== */
 @media only screen and (max-width: em( 1024, 16 ))
 
-/* ==========================================================================
-   iPad Portrait Orientation
-   ========================================================================== */
-@media only screen and (max-width: em( 1024, 16 )) and (orientation:portrait)
-
-/* ==========================================================================
-   iPad Landscape Orientation
-   ========================================================================== */
 @media only screen and (max-width: em( 1024, 16 )) and (orientation:landscape)
 
 /* ==========================================================================

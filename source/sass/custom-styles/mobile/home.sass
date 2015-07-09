@@ -1,0 +1,200 @@
+.gallery
+    display: block
+    height: 100vh
+    overflow: hidden
+    position: absolute
+    top: 0
+    width: 100%
+    z-index: 0
+    /*.flexisel
+        display: block
+        height: 100%
+        margin: 0px
+        overflow: hidden
+        padding: 0px
+        width: 300vw
+        li
+            float: left
+            height: 100%
+            list-style: inside none none
+            padding: 0px
+            width: 100vw !important
+            img
+                height: auto
+                width: 100%*/
+.nbs-flexisel-container
+    height: 100%
+    .nbs-flexisel-inner
+        height: 100%
+        .nbs-flexisel-ul
+            height: 100%
+            .nbs-flexisel-item
+                height: 100%
+                img
+                    max-height: 100%
+                    max-width: unset
+                    width: auto
+.nbs-flexisel-nav-left, .nbs-flexisel-nav-right
+    display: none
+.title .central, .content .central, .contact .central
+    left: unset
+    position: static
+    width: 100%
+header
+    .central
+        height: auto
+        h2
+            display: block
+            flex-flow: unset
+            float: none
+            height: auto
+            margin: 0.5em auto
+            width: 100%
+            &:first-child
+                margin-left: auto
+                width: auto
+            &:last-child
+                margin-left: auto
+                width: auto
+            a
+                align-self: unset
+                display: block
+                height: auto
+                position: relative
+                width: 100%
+                img
+                    display: block
+                    margin: 0 auto
+                    position: static
+                img[width="70"]
+                    top: unset
+                img[width="282"]
+                    top: unset
+.title
+    h1
+        display: block
+        margin: 10px auto 260px
+        img
+            display: block
+            margin: 0 auto
+            width: 90%
+.content
+    box-sizing: border-box
+    padding: 0
+    width: 100%
+    .central
+        box-sizing: border-box
+        padding: 7.8125vw 9.375vw
+        position: static
+        p
+            font-size: 4.6875vw
+            line-height: 1.2em
+            margin: 0
+            width: 100%
+        .features
+            display: flex
+            flex-flow: column nowrap
+            .left, .right
+                width: 100%
+            .left
+                padding-right: 0
+                h3
+                    font-size: 6.875vw
+                    margin: 7.1875vw auto 3.125vw
+                p
+                    font-size: 4.6875vw
+                    line-height: 1.2em
+                ul
+                    margin: 0
+                    padding: 0 0 0 7.8125vw
+                    li
+                        box-sizing: border-box
+                        color: $white-color
+                        margin: 0
+                        padding: 0
+                        p
+                            font-size: 4.6875vw
+                            line-height: 1.2em
+            .right
+                border-left: 0 none transparent
+                display: flex
+                flex-flow: row nowrap
+                padding: 7.8125vw 0 0
+                h4
+                    align-self: center
+                    display: block
+                    margin: 0 auto
+                    img
+.contact
+    form
+        display: flex
+        flex-flow: column nowrap
+        float: left
+        margin: 7.8125vw 0 !important
+        width: 100%
+        fieldset
+            align-self: flex-start
+            box-sizing: border-box
+            margin: 0 auto
+            padding: 0 12.5vw
+            &:nth-child( 1 ), &:nth-child( 2 )
+                padding: 0 8.75vw !important
+                width: 100%
+            .input
+                float: left
+                width: 100%
+                &:nth-child( 1 ), &:nth-child( 2 )
+                    width: 50%
+                label
+                    clear: both
+                    display: block
+                    float: none
+                    margin: 0 0 17px 0
+                    width: 100%
+                    &[for="first_name"], &[for="last_name"]
+                        float: left
+                        width: 100%
+                    &[for="first_name"]
+                        margin-right: 1.5625vw
+                        width: 95%
+                    &[for="message"]
+                        height: 37.5vw
+                    input[type="text"], input[type="email"], textarea
+                        font-size: em( 15, 16 )
+                        width: 100%
+                    input[type="text"], input[type="email"]
+
+                    textarea
+            &:nth-child( 2 )
+                .input
+                    width: 100%
+.quiero-mi-pelo
+    margin: 0
+footer
+    .central
+        p
+            clear: both
+            display: block
+            float: none
+            margin: 7.5vw auto
+            width: 100%
+            img
+                display: block
+                margin: 0.5em auto
+        ul
+            box-sizing: border-box
+            display: flex
+            flex-align: column nowrap
+            float: none
+            margin: 4.6875vw auto
+            padding: 0
+            width: 99.375vw
+            li
+                align-self: stretch
+                box-sizing: border-box
+                float: left
+                list-style: none inside
+                margin: 0 2.8125vw
+                padding: 0
+                a
+                    color: transparent
