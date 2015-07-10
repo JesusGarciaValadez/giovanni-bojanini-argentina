@@ -1,0 +1,36 @@
+        <div class="wrapper contact">
+            <form name="contactForm" action="gateway.php" method="POST" class="central" novalidate ng-if="!contact.received" ng-submit="contactForm.$valid && contact.submit( $event )" ng-controller="ContactController as contact">
+                <fieldset class="clearfix">
+                    <div class="input clearfix">
+                        <label for="first_name">
+                            <input type="text" required="true" name="first_name" placeholder="Nombre" ng-model="contact.firstName" required>
+                        </label>
+                    </div>
+                    <div class="input clearfix">
+                        <label for="last_name">
+                            <input type="text" required="true" name="last_name" placeholder="Apellido" ng-model="contact.lastName" required>
+                        </label>
+                    </div>
+                    <div class="input clearfix">
+                        <label for="email">
+                            <input type="email" required="true" name="email" placeholder="Correo Electrónico" ng-model="contact.email" ng-change="contact.validateEmail()" required>
+                    </label></div>
+                    <div class="input clearfix">
+                        <label for="city">
+                            <input type="text" required="true" name="city" placeholder="Ciudad" ng-model="contact.city" required>
+                        </label>
+                    </div>
+                </fieldset>
+                <fieldset class="clearfix">
+                    <div class="input clearfix">
+                        <label for="message">
+                            <textarea name="message" id="" cols="30" rows="10" placeholder="Mensaje" ng-model="contact.message" required></textarea>
+                        </label>
+                    </div>
+                    <div class="input clearfix">
+                        <button type="submit" class="quiero-mi-pelo" ng-if="contactForm.$valid">Quiero mi pelo</button>
+                    </div>
+                </fieldset>
+                <p class="response" ng-if="contact.received">{{contact.response}}</p>
+            </form>
+        </div>
