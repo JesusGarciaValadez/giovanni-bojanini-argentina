@@ -57,7 +57,8 @@
                         firstName:  contact.firstName,
                         lastName:   contact.lastName,
                         email:      contact.email,
-                        city:       contact.city
+                        city:       contact.city,
+                        message:    contact.message
                     },
                     type: 'POST',
                     dataType: 'json'
