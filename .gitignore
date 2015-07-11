@@ -3,3 +3,5 @@ bower_components
 pp.config.ini
 connection.php
 source/DB
+.DS_Store
+*.svn-base
