@@ -8,10 +8,11 @@ ini_set( 'display_errors', 1 );
 date_default_timezone_set( 'America/Mexico_City' );
 
 define( 'CURRENT_PATH', dirname(__FILE__) . DIRECTORY_SEPARATOR . 'snippets' );
+$configFile = CURRENT_PATH . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'config.php';
 
-if ( file_exists( CURRENT_PATH . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'config.php' ) )
+if ( file_exists( $configFile ) )
 {
-    require_once CURRENT_PATH . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'config.php';
+    require_once $configFile;
 }
 else
 {
@@ -23,6 +24,14 @@ function __autoload( $className )
     require_once LIBS_PATH . "{$className}.php";
 }
 
+$config = Common::getConfig();
+
 require_once SNIPPETS_PATH . 'db/connection.php';
 
-require_once SNIPPETS_PATH . 'controller.php';
+$action    = strip_tags( trim( $_GET[ 'action' ] ) );
+
+if ( !empty( $action ) )
+{
+    require_once SNIPPETS_PATH . 'controller.php';
+}
+

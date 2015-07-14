@@ -76,8 +76,8 @@
                 </div>
             </div>
         </section>
-        <div class="wrapper contact">
-            <form name="contactForm" action="gateway.php" method="POST" class="central" novalidate ng-if="!contact.received" ng-submit="contactForm.$valid && contact.submit( $event )" ng-controller="ContactController as contact">
+        <div class="wrapper contact" ng-controller="ContactController as contact">
+            <form name="contactForm" action="gateway.php" method="POST" class="central contact-form" novalidate ng-submit="contactForm.$valid && contact.submit( $event )">
                 <fieldset class="clearfix">
                     <div class="input clearfix">
                         <label for="first_name">
@@ -106,11 +106,11 @@
                         </label>
                     </div>
                     <div class="input clearfix">
-                        <button type="submit" class="quiero-mi-pelo" ng-if="contactForm.$valid">Quiero mi pelo</button>
+                        <input type="submit" name="submit-button" class="quiero-mi-pelo" ng-if="contactForm.$valid">
                     </div>
                 </fieldset>
-                <p class="response" ng-if="contact.received">{{contact.response}}</p>
             </form>
+            <p class="response central" ng-if="contact.received">{{contact.response}}</p>
         </div>
         <footer class="wrapper">
             <div class="central clearfix">

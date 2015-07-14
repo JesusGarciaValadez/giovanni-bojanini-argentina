@@ -38,20 +38,23 @@
             contact.email       = '';
             contact.city        = '';
             contact.received    = false;
-            contact.form        = document.getElementsByTagName( 'form' );
-            contact.url         = contact.form[0].action + '?action=contact';
+            contact.form        = document.getElementsByClassName( 'contact-form' );
+            contact.url         = contact.form[ 0 ].action + '?action=contact';
             contact.response    = '';
 
             contact.submit      = function ( e ) {
                 e.preventDefault();
                 e.stopPropagation();
 
+                contact.received = true;
+                contact.response = 'Recibiendo…';
+
                 $.ajax( contact.url, {
                     converters: {
-                            "* text": window.String,
-                            "text html": true,
-                            "text json": jQuery.parseJSON,
-                            "text xml": jQuery.parseXML
+                        "* text": window.String,
+                        "text html": true,
+                        "text json": jQuery.parseJSON,
+                        "text xml": jQuery.parseXML
                     },
                     data: {
                         firstName:  contact.firstName,
@@ -64,9 +67,11 @@
                     dataType: 'json'
                 } ).done( function ( responseText ) {
                     contact.response = responseText.message;
-                    contact.received = true;
                 } ).fail( function ( ) {
-                    contact.response = 'Hubo un error. Por favor, intenta de nuevo.';
+                    contact.response = "Hubo un error. Por favor, intenta de nuevo.";
+                } ).then( function ( responseText ) {
+                    contact.response = responseText.message;
+                } ).always( function ( responseText ) {
                     contact.received = true;
                 } );
             };

@@ -17,39 +17,26 @@ class Contact extends Model
         $this->_PDOConn = $conn;
     }
 
-    public function validateInfo ( $parameters = [] ) {
-        return new Validator( $this->_info, $parameters );
-    }
-
-    public function insertInfo ( $formValidated )
+    public function insertInfo ( )
     {
-        // Si el formulario no es válido
-        if ( !$form->validate() )
+        try
         {
-            return false;
-        }
-        else
-        {
-            try
-            {
-                $this->_PDOConn->beginTransaction();
+            $this->_PDOConn->beginTransaction();
 
-                if ( $this->insert( $info ) )
-                {
-                    $this->sendEmail( $info );
-                    $this->_PDOConn->commit();
-                    return true;
-                }
-                else
-                {
-                    throw new PDOException( 'No fu$eacute; posible insertar el registro.' );
-                }
-            }
-            catch ( PDOException $e )
+            if ( $this->insert( $this->_info ) )
             {
-                $this->_PDOConn->rollBack();
-                $response   = array ( 'success'=>'false', 'msg'=>'el servicio de DB no esta disponible' );
+                $this->_PDOConn->commit();
+                return true;
             }
+            else
+            {
+                throw new PDOException( 'No fu$eacute; posible insertar el registro.' );
+            }
+        }
+        catch ( PDOException $e )
+        {
+            $this->_PDOConn->rollBack();
+            $response   = array ( 'success'=>'false', 'msg'=>'el servicio de DB no esta disponible' );
         }
         return $response;
     }
@@ -84,30 +71,29 @@ class Contact extends Model
                 $to[] = $destinatario;
             }
 
-            $tpl    = ParserTemplate::parseTemplate( $template, $this->_info );
+            $this->_template    = ParserTemplate::parseTemplate( $this->_template, $this->_info );
 
-            $_cc    = $cc;
-
-            if ( Mailer::sendMail( $this->_subject, $this->_template, $this->_ , '' , $_cc ) )
+            // $subject = '', $body = '', $to = array(), $cc = array(), $bcc = array(), $att = array()
+            if ( Mailer::sendMail( $this->_subject, $this->_template, $to, $this->_cc ) )
             {
-                $response       = [
-                    'success'   => 'true',
-                    'message'   => utf8_encode( 'Muchas gracias por contestar esta encuesta.' )
-                ];
+                return  $response       = array (
+                            'success' => 'true',
+                            'message' => utf8_encode( 'Muchas gracias por contestar esta encuesta. Nos pondremos en contacto contigo a la brevedad para contarte mas de nuestros beneficios.' )
+                        );
             }
             else
             {
-                $response = [
-                    'success'   =>'false',
-                    'message'   =>utf8_encode( 'El servicio de correo no esta disponible' )
-                ];
+                return  $response       = array (
+                            'success' => 'false',
+                            'message' => utf8_encode( 'Hubo un error al enviar el correo.' )
+                        );
             }
 
         }
         catch( phpmailerException $e )
         {
             $this->_PDOConn->rollBack();
-            $response   = array ( 'success'=>'false', 'msg'=>'el servicio de correo no esta disponible' );
+            return false;
         }
     }
 

@@ -308,6 +308,7 @@ abstract class Model{
         $fields = implode( ', ', array_keys($data) );
         $values = implode( ', ', $data );
 
+        //echo "INSERT INTO {$this->_tableName} ({$fields}) VALUES( $values );";
         $this->setSqlQuery( "INSERT INTO {$this->_tableName} ({$fields}) VALUES( $values );" )->execQuery();
         $lastInsertId = ( $this->getNumRows() )? $this->_PDOmySQLConn->lastInsertId() : 0;
 

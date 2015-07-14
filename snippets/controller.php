@@ -1,69 +1,88 @@
 <?php
-if ( !empty( $_GET['action'] ) )
+if ( !empty( $action ) )
 {
-    $action    = strip_tags( trim( $_GET[ 'action' ] ) );
     $data      = array();
     try
     {
         switch ( $action )
         {
             case 'contact':
-                $data[ "first_name" ]   = trim( $_POST[ 'firstName' ] );
-                $data[ "last_name" ]    = trim( $_POST[ 'lastName' ] );
-                $data[ "email" ]        = trim( $_POST[ 'email' ] );
-                $data[ "city" ]         = trim( $_POST[ 'city' ] );
-                $data[ "message" ]      = trim( $_POST[ 'message' ] );
-                $data[ "date_answer" ]  = date( "Y-m-d H:i:s" );
+                $data[ "first_name" ]    = stripslashes ( strip_tags( trim( $_POST[ 'firstName' ] ) ) );
+                $data[ "last_name" ]     = stripslashes ( strip_tags( trim( $_POST[ 'lastName' ] ) ) );
+                $data[ "email" ]         = stripslashes ( strip_tags( trim( $_POST[ 'email' ] ) ) );
+                $data[ "city" ]          = stripslashes ( strip_tags( trim( $_POST[ 'city' ] ) ) );
+                $data[ "message" ]       = stripslashes ( strip_tags( trim( $_POST[ 'message' ] ) ) );
                 /*
                 $cc = array(
                     array( 'mail'  => 'jesus.garciav@me.com', 'name'  => 'Jesús' )
                 );
                 */
+                $cc = [];
 
-                $parameters[ 'first_name' ] = array(
-                    'requerido' => 1,
-                    'validador' => 'esAlfaNumerico',
-                    'mensaje'   => utf8_encode( 'La primera pregunta es obligatoria.' )
-                );
-                $parameters[ 'last_name' ]  = array(
-                    'requerido' => 1,
-                    'validador' => 'esAlfaNumerico',
-                    'mensaje'   => utf8_encode( 'La segunda pregunta es obligatoria.' )
-                );
-                $parameters[ 'email' ]      = array(
-                    'requerido' => 1,
-                    'validador' => 'esEmail',
-                    'mensaje'   => utf8_encode( 'La tercera pregunta es obligatoria.' )
-                );
-                $parameters[ 'city' ]       = array(
-                    'requerido' => 1,
-                    'validador' => 'esEmail',
-                    'mensaje'   => utf8_encode( 'La cuarta pregunta es obligatoria.' )
-                );
-                $parameters[ 'message' ]    = array(
-                    'requerido' => 1,
-                    'validador' => 'esEmail',
-                    'mensaje'   => utf8_encode( 'La quinta pregunta es obligatoria.' )
-                );
-                $parameters[ 'message' ]    = array(
-                    'requerido' => 1,
-                    'validador' => 'esAlfaNumerico',
-                    'mensaje'   => utf8_encode( 'La quinta pregunta es obligatoria.' )
-                );
-                $contact   = new Contact( $dbh, 'B0j4n1n1_C0n74c7_F0rm' );
-                $contact->setInfo( $data );
-                $contact->setTemplate( "email.tpl" );
-                $contact->setSubject( "Hay un nuevo mensaje del sitio tu Foto con el Güero" );
-                $contact->setCorreo( "contactos@tufotoconelguero.com" );
-                $contact->setCC( $cc );
+                $rules      = [ 'first_name' => [
+                                    'requerido' => 1,
+                                    'validador' => 'esAlfaNumerico',
+                                    'mensaje'   => utf8_encode( 'La primera pregunta es obligatoria.' )
+                                ],
+                                'last_name' => [
+                                    'requerido' => 1,
+                                    'validador' => 'esAlfaNumerico',
+                                    'mensaje'   => utf8_encode( 'La segunda pregunta es obligatoria.' )
+                                ],
+                                'email'     => [
+                                    'requerido' => 1,
+                                    'validador' => 'esEmail',
+                                    'mensaje'   => utf8_encode( 'La tercera pregunta es obligatoria.' )
+                                ],
+                                'city' => [
+                                    'requerido' => 1,
+                                    'validador' => 'esAlfaNumerico',
+                                    'mensaje'   => utf8_encode( 'La cuarta pregunta es obligatoria.' )
+                                ],
+                                'message' => [
+                                    'requerido' => 1,
+                                    'validador' => 'esAlfaNumerico',
+                                    'mensaje'   => utf8_encode( 'La quinta pregunta es obligatoria.' )
+                                ]
+                            ];
+                $config = Common::getConfig();
 
-                $formValidated  = $contact->validateInfo( $parameters );
-                echo $formValidated;
-                //$contact        = $contact->insertInit( $formValidated );
-                //$data           = json_encode ( $contact );
+
+                $formValidated  = new Validator( $data, $rules );
+                if ( $formValidated->validate() )
+                {
+                    $data[ "date_answer" ]      = date( "Y-m-d H:i:s" );
+
+                    $contact   = new Contact( $dbh, $config['database']['db_table'] );
+                    $contact->setTemplate( "share.tpl" );
+                    $contact->setSubject( "Recuperá mas que el pelo" );
+                    $contact->setCorreo( $config['inbox']['account'] );
+                    $contact->setCC( $cc );
+
+                    $contact->setInfo( $data );
+                    $userSaved    = $contact->insertInfo( $formValidated );
+
+                    if ( $userSaved )
+                    {
+                        $response = $contact->sendEmail( );
+                    }
+                    else
+                    {
+                        $response = false;
+                    }
+                }
+                else
+                {
+                    $message    = $formValidated->getMessage();
+                    $contact    = [ 'response' => 'error', 'message' => $message ];
+                }
+                $data = json_encode( $response );
                 break;
             default:
-                $data = json_encode ( [ 'response' => 'error', 'message' => 'Hay un error en la peticion.' ] );
+                $data = $response       = array (
+                            'success' => 'false',
+                            'message' => utf8_encode( 'El servidor no sabe que hacer.' )
+                        );
                 break;
         }
         echo $data;

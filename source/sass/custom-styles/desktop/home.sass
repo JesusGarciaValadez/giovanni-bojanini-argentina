@@ -25,6 +25,7 @@
 .nbs-flexisel-container
     position: relative
     max-width: 100%
+    top: 80px
     .nbs-flexisel-inner
         background: #fcfcfc
         background: #fcfcfc linear-gradient(top, #fcfcfc 0%, #eeeeee 100%)
@@ -129,7 +130,7 @@ header
         display: flex
         flex-flow: row nowrap
         float: left
-        margin: 26px 0 41px !important
+        margin: 33px 0 41px !important
         width: 417px
         fieldset
             align-self: flex-start
@@ -176,11 +177,16 @@ header
                         height: 100%
                         resize: unset
     p.response
-        @include font-mask( normal, em( 18, 16 ), 1em, $open-sans-condensed-light, #000 )
-        align-self: flex-end
+        @include font-mask( normal, em( 18, 16 ), 1em, $open-sans-condensed-light, $title-color )
+        background-color: $content-background
+        align-self: middle
         display: block
         margin: 0 auto
-        width: 100%
+        padding: 10px
+        text-align: center
+        width: 70%
+        &:empty
+            display: none
 .quiero-mi-pelo
     border: 0 none transparent
     color: transparent
