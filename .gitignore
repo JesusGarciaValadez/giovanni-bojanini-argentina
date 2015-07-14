@@ -1,2 +1,7 @@
 bower_components
 .sass-cache/
+pp.config.ini
+connection.php
+source/DB
+.DS_Store
+*.svn-base
