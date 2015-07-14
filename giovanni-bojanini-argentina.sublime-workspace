@@ -227,7 +227,7 @@
 			"file": "source/kit/carrusel.kit",
 			"settings":
 			{
-				"buffer_size": 407,
+				"buffer_size": 897,
 				"line_ending": "Unix"
 			}
 		},
@@ -235,7 +235,7 @@
 			"file": "source/kit/index.kit",
 			"settings":
 			{
-				"buffer_size": 3373,
+				"buffer_size": 4135,
 				"line_ending": "Unix"
 			}
 		},
@@ -243,7 +243,7 @@
 			"file": "source/kit/footer.kit",
 			"settings":
 			{
-				"buffer_size": 805,
+				"buffer_size": 909,
 				"line_ending": "Unix"
 			}
 		},
@@ -251,7 +251,7 @@
 			"file": "source/sass/custom-styles/desktop/home.sass",
 			"settings":
 			{
-				"buffer_size": 4896,
+				"buffer_size": 6270,
 				"line_ending": "Unix"
 			}
 		}
@@ -435,8 +435,6 @@
 	[
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source",
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit",
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass/custom-styles",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass/custom-styles/desktop",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass/default-styles",
@@ -756,22 +754,24 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 407,
+						"buffer_size": 897,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								48,
-								48
+								0,
+								0
 							]
 						],
 						"settings":
 						{
 							"apply_syntax_touched": true,
 							"color_scheme": "Packages/User/Color Highlighter/themes/itg.dark.tmTheme",
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -786,15 +786,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3373,
+						"buffer_size": 4135,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3005,
-								3026
+								0,
+								0
 							]
 						],
 						"settings":
@@ -818,15 +818,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 805,
+						"buffer_size": 909,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								737,
-								737
+								0,
+								0
 							]
 						],
 						"settings":
@@ -850,18 +850,31 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4896,
+						"buffer_size": 6270,
 						"regions":
 						{
-							"gutter_color_15":
+							"gutter_color_604":
 							{
 								"flags": 144,
-								"icon": "Cache/GutterColor/#D0D0D0.png",
+								"icon": "Cache/GutterColor/#fcfcfc.png",
 								"regions":
 								[
 									[
-										4896,
-										4896
+										604,
+										631
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_632":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#fcfcfc.png",
+								"regions":
+								[
+									[
+										632,
+										706
 									]
 								],
 								"scope": "gutter_color"
@@ -870,8 +883,8 @@
 						"selection":
 						[
 							[
-								4320,
-								4320
+								0,
+								0
 							]
 						],
 						"settings":
@@ -968,7 +981,7 @@
 		[
 			[
 				"",
-				"/Applications/MAMP/htdocs/boletin-axa-prevencion-360/source/sass/prevencion-360.sublime-project"
+				"/Applications/MAMP/htdocs/sipirily/sipirily.sublime-project"
 			],
 			[
 				"boletin",
