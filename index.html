@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html class="no-js" lang="es" ng-app="BojaApp">
+<html class="no-js" lang="es">
     <head>
         <title>Recuperá mas que el pelo</title>
         <meta charset="utf-8">
@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="http://localhost:5757/css/main.css">
         <script src="http://localhost:5757/js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
-    <body class="giovanni-bojanini">
+    <body class="giovanni-bojanini" ng-app="BojaApp">
         <section class="wrapper gallery clearfix">
             <ul class="clearfix flexisel">
                 <li>
@@ -77,32 +77,32 @@
             </div>
         </section>
         <div class="wrapper contact" ng-controller="ContactController as contact">
-            <form name="contactForm" action="gateway.php" method="POST" class="central contact-form" novalidate ng-submit="contactForm.$valid && contact.submit( $event )">
+            <form name="contactForm" action="gateway.php" method="POST" class="central contact-form" novalidate ng-submit="contactForm.$valid && $scope.contact.processForm( $event )">
                 <fieldset class="clearfix">
                     <div class="input clearfix">
                         <label for="first_name">
-                            <input type="text" required="true" name="first_name" placeholder="Nombre" ng-model="contact.firstName" required>
+                            <input type="text" required="true" name="first_name" placeholder="Nombre" ng-model="$scope.contact.firstName" required>
                         </label>
                     </div>
                     <div class="input clearfix">
                         <label for="last_name">
-                            <input type="text" required="true" name="last_name" placeholder="Apellido" ng-model="contact.lastName" required>
+                            <input type="text" required="true" name="last_name" placeholder="Apellido" ng-model="$scope.contact.lastName" required>
                         </label>
                     </div>
                     <div class="input clearfix">
                         <label for="email">
-                            <input type="email" required="true" name="email" placeholder="Correo Electrónico" ng-model="contact.email" ng-change="contact.validateEmail()" required>
+                            <input type="email" required="true" name="email" placeholder="Correo Electrónico" ng-model="contact.email" ng-change="$scope.contact.validateEmail()" required>
                     </label></div>
                     <div class="input clearfix">
                         <label for="city">
-                            <input type="text" required="true" name="city" placeholder="Ciudad" ng-model="contact.city" required>
+                            <input type="text" required="true" name="city" placeholder="Ciudad" ng-model="$scope.contact.city" required>
                         </label>
                     </div>
                 </fieldset>
                 <fieldset class="clearfix">
                     <div class="input clearfix">
                         <label for="message">
-                            <textarea name="message" id="" cols="30" rows="10" placeholder="Mensaje" ng-model="contact.message" required></textarea>
+                            <textarea name="message" id="" cols="30" rows="10" placeholder="Mensaje" ng-model="$scope.contact.message" required></textarea>
                         </label>
                     </div>
                     <div class="input clearfix">
@@ -110,7 +110,7 @@
                     </div>
                 </fieldset>
             </form>
-            <p class="response central" ng-if="contact.received">{{contact.response}}</p>
+            <p class="response central" ng-if="$scope.contact.received">{{contact.response}}</p>
         </div>
         <footer class="wrapper">
             <div class="central clearfix">

@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"getElementB",
+				"getElementsByClassName('aSome')"
+			],
+			[
+				"lo",
+				"log()	browserSpecs.js"
+			],
+			[
 				"ALIG",
 				"align-self"
 			],
@@ -227,7 +235,7 @@
 			"file": "source/kit/contact.kit",
 			"settings":
 			{
-				"buffer_size": 2213,
+				"buffer_size": 2208,
 				"line_ending": "Unix"
 			}
 		},
@@ -235,23 +243,15 @@
 			"file": "source/javascript/main.js",
 			"settings":
 			{
-				"buffer_size": 3510,
+				"buffer_size": 3732,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "source/sass/custom-styles/desktop/home.sass",
+			"file": "snippets/libs/pp.config.ini",
 			"settings":
 			{
-				"buffer_size": 6659,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": ".gitignore",
-			"settings":
-			{
-				"buffer_size": 90,
+				"buffer_size": 493,
 				"line_ending": "Unix"
 			}
 		}
@@ -434,7 +434,9 @@
 	"expanded_folders":
 	[
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina",
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/snippets/libs/templates",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/snippets",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/snippets/libs",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass/custom-styles",
@@ -442,6 +444,9 @@
 	],
 	"file_history":
 	[
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit/head.kit",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass/custom-styles/desktop/home.sass",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/.htaccess",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/snippets/libs/Contact.php",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass/main.sass",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/snippets/controller.php",
@@ -453,7 +458,6 @@
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit/carrusel.kit",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit/index.kit",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit/footer.kit",
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass/custom-styles/desktop/home.sass",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass/sprite/sprite.css",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass/default-styles/_colors.sass",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass/default-styles/_general.sass",
@@ -461,7 +465,6 @@
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass/sprite/sprite.scss",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit/header.kit",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/index.html",
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit/head.kit",
 		"/Applications/MAMP/htdocs/tufotoconelguero-new/Code/templates/sass/default-styles/_general_phablet.sass",
 		"/Applications/MAMP/htdocs/tufotoconelguero-new/Code/templates/sass/custom-styles/mobile/photography-phablet_landscape.sass",
 		"/Applications/MAMP/htdocs/boletin-axa-prevencion-360/source/kit/index-auto.kit",
@@ -568,12 +571,11 @@
 		"/Applications/MAMP/htdocs/boletin_axa/vida-tiendas/index-v3.html",
 		"/Applications/MAMP/htdocs/boletin_axa/vida-tiendas/source/sass/main-3.sass",
 		"/Applications/MAMP/htdocs/boletin_axa/vida-tiendas/source/sass/custom-styles/home-3.sass",
-		"/Applications/MAMP/htdocs/boletin_axa/vida-tiendas/source/kit/index-3.kit",
-		"/Applications/MAMP/htdocs/boletin_axa/Code/templates/mailings/hsbc/mes-4.html"
+		"/Applications/MAMP/htdocs/boletin_axa/vida-tiendas/source/kit/index-3.kit"
 	],
 	"find":
 	{
-		"height": 25.0
+		"height": 40.0
 	},
 	"find_in_files":
 	{
@@ -745,7 +747,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -754,15 +756,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2213,
+						"buffer_size": 2208,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								266,
-								266
+								2144,
+								2168
 							]
 						],
 						"settings":
@@ -786,15 +788,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3510,
+						"buffer_size": 3732,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1101,
-								1141
+								2698,
+								2698
 							]
 						],
 						"settings":
@@ -806,124 +808,40 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 482.0,
+						"translation.y": 616.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "source/sass/custom-styles/desktop/home.sass",
+					"file": "snippets/libs/pp.config.ini",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6659,
-						"regions":
-						{
-							"gutter_color_604":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#fcfcfc.png",
-								"regions":
-								[
-									[
-										618,
-										645
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_618":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#fcfcfc.png",
-								"regions":
-								[
-									[
-										618,
-										645
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_632":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#fcfcfc.png",
-								"regions":
-								[
-									[
-										646,
-										720
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_646":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#fcfcfc.png",
-								"regions":
-								[
-									[
-										646,
-										720
-									]
-								],
-								"scope": "gutter_color"
-							}
-						},
-						"selection":
-						[
-							[
-								3790,
-								3790
-							]
-						],
-						"settings":
-						{
-							"apply_syntax_touched": true,
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.gcfix.tmTheme",
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1953.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": ".gitignore",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 90,
+						"buffer_size": 493,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								76,
+								76
 							]
 						],
 						"settings":
 						{
 							"apply_syntax_touched": true,
 							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.gcfix.tmTheme",
-							"syntax": "Packages/Seti_UI/Langs/Git.tmLanguage"
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
