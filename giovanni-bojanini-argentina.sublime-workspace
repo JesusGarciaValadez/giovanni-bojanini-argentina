@@ -231,30 +231,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "source/kit/contact.kit",
-			"settings":
-			{
-				"buffer_size": 2208,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "source/javascript/main.js",
-			"settings":
-			{
-				"buffer_size": 3732,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "snippets/libs/pp.config.ini",
-			"settings":
-			{
-				"buffer_size": 493,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -434,23 +410,25 @@
 	"expanded_folders":
 	[
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/js",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/snippets",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/snippets/libs",
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source",
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit",
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass/custom-styles",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass/custom-styles/desktop"
 	],
 	"file_history":
 	[
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/.htaccess",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/gateway.php",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/javascript/main.js",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit/contact.kit",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/snippets/controller.php",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/js/main.min.js",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/snippets/libs/pp.config.ini",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit/head.kit",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass/custom-styles/desktop/home.sass",
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/.htaccess",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/snippets/libs/Contact.php",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass/main.sass",
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/snippets/controller.php",
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/snippets/libs/pp.config.ini",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/DB/database.sql",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/snippets/config/config.php",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/snippets/libs/templates/share.tpl",
@@ -567,11 +545,7 @@
 		"/Users/jgarcia/Library/Application Support/Sublime Text 3/Packages/Color Highlighter/Default (OSX).sublime-keymap",
 		"/Users/jgarcia/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
 		"/Applications/MAMP/htdocs/boletin_axa/Code/templates/mailings/vida-tiendas/clientes-3.html",
-		"/Applications/MAMP/htdocs/boletin_axa/vida-tiendas/index-3.php",
-		"/Applications/MAMP/htdocs/boletin_axa/vida-tiendas/index-v3.html",
-		"/Applications/MAMP/htdocs/boletin_axa/vida-tiendas/source/sass/main-3.sass",
-		"/Applications/MAMP/htdocs/boletin_axa/vida-tiendas/source/sass/custom-styles/home-3.sass",
-		"/Applications/MAMP/htdocs/boletin_axa/vida-tiendas/source/kit/index-3.kit"
+		"/Applications/MAMP/htdocs/boletin_axa/vida-tiendas/index-3.php"
 	],
 	"find":
 	{
@@ -592,6 +566,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"_POST",
+			" )",
+			"( ",
+			"$scope.",
 			"label",
 			"<div class=\"input\">",
 			"OpenSans-CondBold-webfont",
@@ -715,11 +693,7 @@
 			"/clientes/",
 			"<td width=\"569\" align=\"center\" valign=\"top\" border=\"0\" style=\"padding-left: 10px; padding-right: 10px;\">",
 			"width=\"560\"",
-			"width=\"600\"",
-			"width=\"580\"",
-			"boletin-axa/images/assets/2015/mayo/auto/",
-			"www.cmv.com.mx",
-			"src=\"https://www.boletinaxa.com.mx/"
+			"width=\"600\""
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -727,6 +701,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			")",
+			"(",
 			"_blank",
 			"url(\"../AXA-theme/css/axa/fonts/",
 			"url(\"../AXA-theme/css/axa/fonts/mailings/dentalia/clientes-3/",
@@ -747,103 +723,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "source/kit/contact.kit",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2208,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2144,
-								2168
-							]
-						],
-						"settings":
-						{
-							"apply_syntax_touched": true,
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.gcfix.tmTheme",
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "source/javascript/main.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3732,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2698,
-								2698
-							]
-						],
-						"settings":
-						{
-							"apply_syntax_touched": true,
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.gcfix.tmTheme",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 616.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "snippets/libs/pp.config.ini",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 493,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								76,
-								76
-							]
-						],
-						"settings":
-						{
-							"apply_syntax_touched": true,
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.gcfix.tmTheme",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -922,7 +803,7 @@
 		[
 			[
 				"",
-				"/Applications/MAMP/htdocs/kidzania-coupon/kidzania.sublime-project"
+				"/Applications/MAMP/htdocs/boletin_axa/boletin-axa.sublime-project"
 			],
 			[
 				"boletin",

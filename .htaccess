@@ -650,3 +650,7 @@ RewriteRule ^(.*)$ index.php?q=$1 [L,QSA]
 #BrowserMatch "Mozilla/4.[0-9]{2}" brokenvary=1
 #BrowserMatch "Opera" !brokenvary
 #SetEnvIf brokenvary 1 force-no-vary
+
+Header append X-FRAME-OPTIONS "DENY"
+
+Header edit Set-Cookie ^(.*)$ $1;HttpOnly;Secure
