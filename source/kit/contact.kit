@@ -1,30 +1,30 @@
         <div class="wrapper contact" ng-controller="ContactController as contact">
-            <form name="contactForm" action="gateway.php" method="POST" class="central contact-form" novalidate ng-submit="contactForm.$valid && $scope.contact.processForm( $event )">
+            <form name="contactForm" action="gateway.php" method="POST" class="central contact-form" novalidate ng-submit="contactForm.$valid && form.submitForm( $event )">
                 <fieldset class="clearfix">
                     <div class="input clearfix">
                         <label for="first_name">
-                            <input type="text" required="true" name="first_name" placeholder="Nombre" ng-model="$scope.contact.firstName" required>
+                            <input type="text" required="true" name="first_name" placeholder="Nombre" ng-model="contact.firstName" required>
                         </label>
                     </div>
                     <div class="input clearfix">
                         <label for="last_name">
-                            <input type="text" required="true" name="last_name" placeholder="Apellido" ng-model="$scope.contact.lastName" required>
+                            <input type="text" required="true" name="last_name" placeholder="Apellido" ng-model="contact.lastName" required>
                         </label>
                     </div>
                     <div class="input clearfix">
                         <label for="email">
-                            <input type="email" required="true" name="email" placeholder="Correo Electrónico" ng-model="contact.email" ng-change="$scope.contact.validateEmail()" required>
+                            <input type="email" required="true" name="email" placeholder="Correo Electrónico" ng-model="contact.email" required>
                     </label></div>
                     <div class="input clearfix">
                         <label for="city">
-                            <input type="text" required="true" name="city" placeholder="Ciudad" ng-model="$scope.contact.city" required>
+                            <input type="text" required="true" name="city" placeholder="Ciudad" ng-model="contact.city" required>
                         </label>
                     </div>
                 </fieldset>
                 <fieldset class="clearfix">
                     <div class="input clearfix">
                         <label for="message">
-                            <textarea name="message" id="" cols="30" rows="10" placeholder="Mensaje" ng-model="$scope.contact.message" required></textarea>
+                            <textarea name="message" id="" cols="30" rows="10" placeholder="Mensaje" ng-model="contact.message" required></textarea>
                         </label>
                     </div>
                     <div class="input clearfix">
@@ -32,5 +32,5 @@
                     </div>
                 </fieldset>
             </form>
-            <p class="response central" ng-if="$scope.contact.received">{{contact.response}}</p>
+            <p class="response central" ng-if="form.received">{{form.response}}</p>
         </div>
