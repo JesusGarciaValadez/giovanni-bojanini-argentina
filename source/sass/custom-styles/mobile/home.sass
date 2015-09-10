@@ -1,46 +1,18 @@
-.gallery
-    display: block
-    height: 100vh
-    overflow: hidden
-    position: absolute
-    top: 0
+.giovanni-bojanini
+    background: url( '../img/background-couple-mobile.jpg' ) no-repeat scroll center top transparent
+    background-size: 100% auto
+    height: auto
     width: 100%
-    z-index: 0
-    /*.flexisel
-        display: block
-        height: 100%
-        margin: 0px
-        overflow: hidden
-        padding: 0px
-        width: 300vw
-        li
-            float: left
-            height: 100%
-            list-style: inside none none
-            padding: 0px
-            width: 100vw !important
-            img
-                height: auto
-                width: 100%*/
-.nbs-flexisel-container
-    height: 100%
-    .nbs-flexisel-inner
-        height: 100%
-        .nbs-flexisel-ul
-            height: 100%
-            .nbs-flexisel-item
-                height: 100%
-                img
-                    max-height: 100%
-                    max-width: unset
-                    width: auto
-.nbs-flexisel-nav-left, .nbs-flexisel-nav-right
-    display: none
+    &.men
+        background-image: url( '../img/background-men-mobile.jpg' )
+    &.women
+        background-image: url( '../img/background-women-mobile.jpg' )
 .title .central, .content .central, .contact .central
     left: unset
     position: static
     width: 100%
 header
+    background-color: $footer-background
     .central
         height: auto
         h2
@@ -79,6 +51,7 @@ header
             margin: 0 auto
             width: 90%
 .content
+    background-color: $content-background
     box-sizing: border-box
     padding: 0
     width: 100%
@@ -87,8 +60,7 @@ header
         padding: 7.8125vw 9.375vw
         position: static
         p
-            font-size: 4.6875vw
-            line-height: 1.2em
+            @include font-mask( normal, 4.6875vw, 1.2em, $open-sans-condensed-light, $white-color )
             margin: 0
             width: 100%
         .features
@@ -99,11 +71,9 @@ header
             .left
                 padding-right: 0
                 h3
-                    font-size: 6.875vw
+                    @include font-mask( normal, 6.875vw, 1em, $open-sans-condensed-light, $title-color )
                     margin: 7.1875vw auto 3.125vw
-                p
-                    font-size: 4.6875vw
-                    line-height: 1.2em
+                    text-transform: uppercase
                 ul
                     margin: 0
                     padding: 0 0 0 7.8125vw
@@ -113,7 +83,7 @@ header
                         margin: 0
                         padding: 0
                         p
-                            font-size: 4.6875vw
+                            @include font-mask( normal, 4.6875vw, 1em, $open-sans-condensed-light, $white-color )
                             line-height: 1.2em
             .right
                 border-left: 0 none transparent
@@ -130,7 +100,7 @@ header
         display: flex
         flex-flow: column nowrap
         float: left
-        margin: 7.8125vw 0 !important
+        margin: 7.8125vw 0
         width: 100%
         fieldset
             align-self: flex-start
@@ -138,7 +108,7 @@ header
             margin: 0 auto
             padding: 0 12.5vw
             &:nth-child( 1 ), &:nth-child( 2 )
-                padding: 0 8.75vw !important
+                padding: 0 8.75vw
                 width: 100%
             .input
                 float: left
@@ -158,19 +128,49 @@ header
                         margin-right: 1.5625vw
                         width: 95%
                     &[for="message"]
-                        height: 37.5vw
+                        height: 50.625vw
                     input[type="text"], input[type="email"], textarea
-                        font-size: em( 15, 16 )
+                        @include font-mask( normal, em( 15, 16 ), 1em, $open-sans-condensed-light, $white-color )
+                        background-color: $input-background
+                        border: 0 none transparent
+                        box-sizing: border-box
+                        margin: 0 auto
+                        padding: 5px
+                        text-align: left
                         width: 100%
+                        &.error, &.ng-invalid
+                            border: 1px solid red
+                        &.correct, &.ng-valid
+                            border: 1px solid green
                     input[type="text"], input[type="email"]
-
                     textarea
             &:nth-child( 2 )
                 .input
                     width: 100%
+    p.response
+        @include font-mask( normal, em( 18, 16 ), 1em, $open-sans-condensed-light, $title-color )
+        background-color: $content-background
+        align-self: middle
+        display: block
+        margin: 0 auto
+        padding: 10px
+        text-align: center
+        width: 70%
+        &:empty
+            display: none
 .quiero-mi-pelo
-    margin: 0
+    border: 0 none transparent
+    color: transparent
+    display: block
+    float: none
+    margin: 0 auto
+    padding: 0
+input[placeholder], textarea[placeholder]
+    color: $white-color
+    &::-moz-placeholder,&:-moz-placeholder,&::placeholder,&:placeholder
+        color: $white-color
 footer
+    background-color: $footer-background
     .central
         p
             clear: both

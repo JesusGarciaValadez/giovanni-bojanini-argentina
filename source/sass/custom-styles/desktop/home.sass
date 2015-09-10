@@ -1,66 +1,22 @@
-.gallery
+.central
+    width: 960px
+.giovanni-bojanini
+    background: url( '../img/background-couple.jpg' ) no-repeat scroll center center transparent
+    background-size: auto 100%
     display: block
-    height: 100vh
-    overflow: hidden
-    position: fixed
-    top: 0
     width: 100%
-    z-index: 0
-    /*.flexisel
-        display: block
-        height: 100%
-        margin: 0px
-        overflow: hidden
-        padding: 0px
-        width: 300vw
-        li
-            float: left
-            height: 100%
-            list-style: inside none none
-            padding: 0px
-            width: 100vw !important
-            img
-                height: auto
-                width: 100%*/
-.nbs-flexisel-container
-    position: relative
-    max-width: 100%
-    top: 80px
-    .nbs-flexisel-inner
-        background: #fcfcfc
-        background: #fcfcfc linear-gradient(top, #fcfcfc 0%, #eeeeee 100%)
-        float: left
-        overflow: hidden
-        width: 100%
-        .nbs-flexisel-ul
-            list-style-type: none
-            margin: 0px
-            padding: 0px
-            position: relative
-            text-align: center
-            width: 9999px
-            .nbs-flexisel-item
-                cursor: pointer
-                float: left
-                line-height: 0px
-                margin: 0px
-                padding: 0px
-                position: relative
-                img
-                    cursor: pointer
-                    margin-top: 10px
-                    margin-bottom: 10px
-                    position: relative
-                    width: 100%
-.nbs-flexisel-nav-left, .nbs-flexisel-nav-right
-    display: none
+    &.men
+        background-image: url( '../img/background-men.jpg' )
+    &.women
+        background-image: url( '../img/background-women.jpg' )
 .title .central, .content .central, .contact .central
     left: 5.5%
-    margin: 0
+    padding: 0
     position: relative
+    width: 800px
+.contact .central
     width: 520px
 header
-    background-color: $footer-background
     .central
         height: 100px
         h2
@@ -86,55 +42,49 @@ header
                     top: ( 100px / 2 ) - ( 33px / 2 )
 .title
     h1
-        margin: 40px 0 25px 70px
+        margin: 40px 0 25px 60px
         img
+            margin: 0
+            width: auto
 .content
-    background-color: $content-background
-    box-sizing: border-box
     padding: 18px 0
     .central
+        display: block
+        margin: 0
         p
-            @include font-mask( normal, em( 12, 16 ), 1em, $open-sans-condensed-light, $white-color )
+            font-size: em( 12, 16 )
+            line-height: 1em
             margin: 15px auto
         .features
-            display: flex
             flex-flow: row nowrap
             .left
                 padding-right: 25px
                 h3
-                    @include font-mask( normal, em( 17, 16 ), 1em, $open-sans-condensed-light, $title-color )
+                    font-size: em( 17, 16 )
                     margin: 0 auto
-                    text-transform: uppercase
                 p
                 ul
-                    margin: 0
                     padding: 0 0 0 10px
                     li
                         color: $white-color
                         margin: 0
                         padding: 0
                         p
-                            @include font-mask( normal, em( 12, 16 ), 1em, $open-sans-condensed-light, $white-color )
+                            font-size: em( 12, 16 )
             .right
                 border-left: 1px dashed $separator-color
-                display: flex
                 flex-flow: row nowrap
-                padding-left: 25px
+                padding: 40px 25px
                 h4
-                    align-self: center
-                    display: block
-                    margin: 0 auto
                     img
 .contact
     form
-        display: flex
         flex-flow: row nowrap
-        float: left
-        margin: 33px 0 41px !important
+        margin: 33px 0 41px
         width: 417px
         fieldset
-            align-self: flex-start
-            margin: 0 auto
+            &:nth-child( 1 ), &:nth-child( 2 )
+                padding: 0
             &:nth-child( 1 )
                 width: 217px
             &:nth-child( 2 )
@@ -151,59 +101,31 @@ header
                     margin: 0 17px 17px 0
                     width: 200px
                     &[for="first_name"], &[for="last_name"]
-                        float: left
                         width: 95px
                     &[for="first_name"]
                         margin-right: 10px
                     &[for="message"]
                         height: 120px
                     input[type="text"], input[type="email"], textarea
-                        @include font-mask( normal, em( 13, 16 ), 1em, $open-sans-condensed-light, $white-color )
-                        background-color: $input-background
-                        border: 0 none transparent
-                        box-sizing: border-box
-                        color: $white-color
-                        margin: 0 auto
-                        padding: 5px
-                        text-align: left
-                        width: 100%
-                        &.error, &.ng-invalid
-                            border: 1px solid red
-                        &.correct, &.ng-valid
-                            border: 1px solid green
+                        font-size: em( 13, 16 )
                     input[type="text"], input[type="email"]
                         height: 28px
                     textarea
                         height: 100%
                         resize: unset
     p.response
-        @include font-mask( normal, em( 18, 16 ), 1em, $open-sans-condensed-light, $title-color )
-        background-color: $content-background
-        align-self: middle
-        display: block
-        margin: 0 auto
-        padding: 10px
-        text-align: center
-        width: 70%
-        &:empty
-            display: none
+        font-size: em( 18, 16 )
 .quiero-mi-pelo
-    border: 0 none transparent
-    color: transparent
     float: right
     margin: 0
-    padding: 0
-input[placeholder], textarea[placeholder]
-    color: $white-color
-    &::-moz-placeholder,&:-moz-placeholder,&::placeholder,&:placeholder
-        color: $white-color
 footer
-    background-color: $footer-background
     .central
+        display: flex
+        flex-align: row nowrap
         p
             display: inline-block
             float: left
-            margin: 24px 38px
+            margin: 15px 30px
             img
         ul
             box-sizing: border-box
