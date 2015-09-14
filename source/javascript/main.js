@@ -75,6 +75,7 @@
                         "text xml": jQuery.parseXML
                     },
                     data: {
+                        formID:     $('input[type="hidden"]').val(),
                         firstName:  $scope.contact.firstName,
                         lastName:   $scope.contact.lastName,
                         email:      $scope.contact.email,
