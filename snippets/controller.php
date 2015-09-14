@@ -7,6 +7,7 @@ if ( !empty( $action ) )
         switch ( $action )
         {
             case 'contact':
+                $data[ "form_id" ]       = stripslashes ( strip_tags( trim( $_POST[ 'formID' ] ) ) );
                 $data[ "first_name" ]    = stripslashes ( strip_tags( trim( $_POST[ 'firstName' ] ) ) );
                 $data[ "last_name" ]     = stripslashes ( strip_tags( trim( $_POST[ 'lastName' ] ) ) );
                 $data[ "email" ]         = stripslashes ( strip_tags( trim( $_POST[ 'email' ] ) ) );
@@ -17,34 +18,51 @@ if ( !empty( $action ) )
                     array( 'mail'  => 'jesus.garciav@me.com', 'name'  => 'Jesús' )
                 );
                 */
-                $cc = [];
+                $cc = array();
 
-                $rules      = [ 'first_name' => [
+                $bcc = array(
+                    array(
+                        'mail'  => $config[ 'emailBCC' ][ 'email_address_one' ],
+                        'name'  => $config[ 'emailBCC' ][ 'email_name_one' ]
+                    ),
+                    array(
+                        'mail'  => $config[ 'emailBCC' ][ 'email_address_two' ],
+                        'name'  => $config[ 'emailBCC' ][ 'email_name_two' ]
+                    )
+                );
+
+                $rules      = array(
+                                'form_id' => array(
+                                    'requerido' => 1,
+                                    'validador' => 'esAlfaNumerico',
+                                    'mensaje'   => utf8_encode( 'El ID del formulario es obligatorio.' )
+                                ),
+                                'first_name' => array(
                                     'requerido' => 1,
                                     'validador' => 'esAlfaNumerico',
                                     'mensaje'   => utf8_encode( 'La primera pregunta es obligatoria.' )
-                                ],
-                                'last_name' => [
+                                ),
+                                'last_name' => array(
                                     'requerido' => 1,
                                     'validador' => 'esAlfaNumerico',
                                     'mensaje'   => utf8_encode( 'La segunda pregunta es obligatoria.' )
-                                ],
-                                'email'     => [
+                                ),
+                                'email'     => array(
                                     'requerido' => 1,
                                     'validador' => 'esEmail',
                                     'mensaje'   => utf8_encode( 'La tercera pregunta es obligatoria.' )
-                                ],
-                                'city' => [
+                                ),
+                                'city' => array(
                                     'requerido' => 1,
                                     'validador' => 'esAlfaNumerico',
                                     'mensaje'   => utf8_encode( 'La cuarta pregunta es obligatoria.' )
-                                ],
-                                'message' => [
+                                ),
+                                'message' => array(
                                     'requerido' => 1,
                                     'validador' => 'esAlfaNumerico',
                                     'mensaje'   => utf8_encode( 'La quinta pregunta es obligatoria.' )
-                                ]
-                            ];
+                                )
+                            );
                 $config = Common::getConfig();
 
 
@@ -56,8 +74,8 @@ if ( !empty( $action ) )
                     $contact   = new Contact( $dbh, $config['database']['db_table'] );
                     $contact->setTemplate( "share.tpl" );
                     $contact->setSubject( "Recuperá mas que el pelo" );
-                    $contact->setCorreo( $config['inbox']['account'] );
-                    $contact->setCC( $cc );
+                    $contact->setCorreo( $config['mail_service']['sender_mail'] );
+                    $contact->setBCC( $bcc );
 
                     $contact->setInfo( $data );
                     $userSaved    = $contact->insertInfo( $formValidated );
@@ -74,7 +92,7 @@ if ( !empty( $action ) )
                 else
                 {
                     $message    = $formValidated->getMessage();
-                    $contact    = [ 'response' => 'error', 'message' => $message ];
+                    $contact    = array( 'response' => 'error', 'message' => $message );
                 }
                 $data = json_encode( $response );
                 break;
@@ -101,7 +119,7 @@ if ( !empty( $action ) )
                 break;
             default : $message = $e->getMessage();
         }
-        $data = [ 'response' => false , 'message' => $message ] ;
+        $data = array( 'response' => false , 'message' => $message );
         echo json_encode( $data );
     }
 }

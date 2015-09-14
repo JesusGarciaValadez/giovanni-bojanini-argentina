@@ -8,6 +8,7 @@ class Contact extends Model
     private $_subject    = '';
     private $_correo     = '';
     private $_cc         = array();
+    private $_bcc        = array();
 
     public function __construct( $conn, $db_table )
     {
@@ -46,22 +47,22 @@ class Contact extends Model
         try
         {
             $emails = explode( ',' , $this->_correo );
-            $to     = [];
+            $to     = array();
 
             foreach ( $emails as $email )
             {
-                $params = [
-                    'mail' => [
+                $params = array(
+                    'mail' => array(
                         'requerido' => 1 ,
                         'validador' => 'esEmail',
                         'mensaje' => utf8_encode( 'El correo no es v&aacute;lido.' )
-                    ]
-                ];
+                    )
+                );
 
-                $destinatario = [
+                $destinatario = array(
                     'name' => $email,
                     'mail' => $email
-                ];
+                );
 
                 $form   = new Validator( $destinatario, $params );
                 if ( ( $form->validate() ) === false )
@@ -74,7 +75,7 @@ class Contact extends Model
             $this->_template    = ParserTemplate::parseTemplate( $this->_template, $this->_info );
 
             // $subject = '', $body = '', $to = array(), $cc = array(), $bcc = array(), $att = array()
-            if ( Mailer::sendMail( $this->_subject, $this->_template, $to, $this->_cc ) )
+            if ( Mailer::sendMail( $this->_subject, $this->_template, $to, $this->_cc, $this->_bcc ) )
             {
                 return  $response       = array (
                             'success' => 'true',
@@ -120,6 +121,11 @@ class Contact extends Model
     public function setCC ( $cc )
     {
         $this->_cc           = $cc;
+    }
+
+    public function setBCC ( $bcc )
+    {
+        $this->_bcc           = $bcc;
     }
 
     public function getInfo ( )
