@@ -71,6 +71,7 @@
         <div class="wrapper contact" ng-controller="ContactController as contact">
             <form name="contactForm" action="gateway.php" method="POST" class="central contact-form" novalidate ng-submit="contactForm.$valid && form.submitForm( $event )">
                 <fieldset class="clearfix">
+                    <input type="hidden" name="form_id" ng-model="contact.formID" value="mujer">
                     <div class="input clearfix">
                         <label for="first_name">
                             <input type="text" required="true" name="first_name" placeholder="Nombre" ng-model="contact.firstName" required>
