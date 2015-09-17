@@ -74,7 +74,7 @@ if ( !empty( $action ) )
                     $contact   = new Contact( $dbh, $config['database']['db_table'] );
                     $contact->setTemplate( "share.tpl" );
                     $contact->setSubject( "Recuperá mas que el pelo" );
-                    $contact->setCorreo( $config['mail_service']['sender_mail'] );
+                    $contact->setCorreo( $config['mail_service']['receiver_mail'] );
                     $contact->setBCC( $bcc );
 
                     $contact->setInfo( $data );
