@@ -414,44 +414,45 @@
 	"expanded_folders":
 	[
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina",
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/img",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/snippets/libs",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass/custom-styles",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass/custom-styles/desktop",
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass/custom-styles/mobile",
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass/default-styles"
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass/custom-styles/mobile"
 	],
 	"file_history":
 	[
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass/custom-styles/desktop/home.sass",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit/head.kit",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit/index.kit",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit/mujer.kit",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit/hombre.kit",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass/custom-styles/mobile/home.sass",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/snippets/controller.php",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/snippets/libs/pp.config.ini",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/snippets/config/config.php",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/snippets/libs/Model.php",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/js/main.min.js",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit/contact.kit",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/javascript/main.js",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/DB/database.sql",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/snippets/libs/templates/share.tpl",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/snippets/libs/Contact.php",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/snippets/libs/Mailer.php",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass/main.sass",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass/default-styles/_general.sass",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass/default-styles/_general_mobile.sass",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit/background-index.kit",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit/background-men.kit",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit/background-women.kit",
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit/hombre.kit",
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit/index.kit",
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit/mujer.kit",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit/header.kit",
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/javascript/main.js",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/coffeescript/analytics.coffee",
 		"/Users/jgarcia/Library/Application Support/Sublime Text 3/Packages/User/Plain text.sublime-settings",
 		"/Users/jgarcia/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit/head.kit",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/javascript/analytics.coffee",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/.htaccess",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/gateway.php",
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit/contact.kit",
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/snippets/controller.php",
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/js/main.min.js",
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/snippets/libs/pp.config.ini",
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/snippets/libs/Contact.php",
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/DB/database.sql",
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/snippets/config/config.php",
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/snippets/libs/templates/share.tpl",
 		"/Users/jgarcia/.Trash/controller.php",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit/carrusel.kit",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit/footer.kit",
@@ -549,9 +550,7 @@
 		"/Applications/MAMP/htdocs/boletin_axa/axa-touch-salud/landings/source/sass/custom-styles/desktop/primer-bebe.sass",
 		"/Applications/MAMP/htdocs/boletin_axa/axa-touch-salud/landings/source/sass/default-styles/_general.sass",
 		"/Applications/MAMP/htdocs/anpasa-new/Code/chunks/projectThumbnail.html",
-		"/Applications/MAMP/htdocs/anpasa-new/assets/templates/anpasa/css/catalogo.css",
-		"/Users/jgarcia/Downloads/mas_enfermeras_v2/mas_enfermeras_v2.html",
-		"/Applications/MAMP/htdocs/boletin_axa/Code/templates/mailings/vida-tiendas/agentes-5.html"
+		"/Applications/MAMP/htdocs/anpasa-new/assets/templates/anpasa/css/catalogo.css"
 	],
 	"find":
 	{
@@ -572,6 +571,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"[",
 			"var",
 			"_POST",
 			" )",
@@ -698,8 +698,7 @@
 			"/juntos-por-una-movilidad/",
 			"/vida-tiendas/clientes-3/",
 			"/clientes/",
-			"<td width=\"569\" align=\"center\" valign=\"top\" border=\"0\" style=\"padding-left: 10px; padding-right: 10px;\">",
-			"width=\"560\""
+			"<td width=\"569\" align=\"center\" valign=\"top\" border=\"0\" style=\"padding-left: 10px; padding-right: 10px;\">"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -834,7 +833,7 @@
 	"show_minimap": false,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 263.0,
 	"status_bar_visible": true,
 	"template_settings":
