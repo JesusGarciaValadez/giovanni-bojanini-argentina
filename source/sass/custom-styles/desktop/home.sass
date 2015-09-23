@@ -4,6 +4,7 @@
     background: url( '../img/background-couple.jpg' ) no-repeat scroll center center transparent
     background-size: auto 100%
     display: block
+    height: auto
     width: 100%
     &.men
         background-image: url( '../img/background-men.jpg' )
@@ -33,13 +34,9 @@ header
                 width: 282px
             a
                 align-self: middle
-                position: relative
+                display: flex
                 img
-                    position: relative
-                img[width="70"]
-                    top: ( 100px / 2 ) - ( 55px / 2 )
-                img[width="282"]
-                    top: ( 100px / 2 ) - ( 33px / 2 )
+                    align-self: center
 .title
     h1
         margin: 40px 0 25px 60px
@@ -66,10 +63,10 @@ header
                     font-size: em( 17, 16 )
                     margin: 5px auto
                 p
-                    font-size: em( 12, 16 )
+                    float: none
+                    font-size: em( 13, 16 )
                     margin: 5px auto 0
                 ul
-                    float: left
                     margin: 10px 0 0
                     padding: 0 0 0 25px
                     li
@@ -78,8 +75,8 @@ header
                         margin: 0
                         padding: 0
                         p
-                            font-size: em( 12, 16 )
-                            line-height: em( 20.4, 12 )
+                            font-size: em( 13, 16 )
+                            line-height: em( 20.4, 13 )
                             margin: 0 auto
             .right
                 border-left: 1px dashed $separator-color
@@ -90,6 +87,7 @@ header
 .contact
     form
         flex-flow: row nowrap
+        height: 24.673439768vh // 170px
         margin: 33px 0 41px
         width: 417px
         fieldset
