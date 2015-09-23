@@ -1,15 +1,15 @@
         <div class="wrapper contact" ng-controller="ContactController as contact">
-            <form name="contactForm" action="gateway.php" method="POST" class="central contact-form" novalidate ng-submit="contactForm.$valid && form.submitForm( $event )">
+            <form name="contactForm" action="gateway.php?action=contact" method="POST" class="central contact-form" novalidate ng-submit="contactForm.$valid && form.submitForm( $event )">
                 <fieldset class="clearfix">
-                    <input type="hidden" name="form_id" ng-model="contact.formID" value="<!-- $form -->">
+                    <input type="hidden" name="form_id" ng-model="contact.form_id" value="<!-- $form -->">
                     <div class="input clearfix">
                         <label for="first_name">
-                            <input type="text" required="true" name="first_name" placeholder="Nombre" ng-model="contact.firstName" required>
+                            <input type="text" required="true" name="first_name" placeholder="Nombre" ng-model="contact.first_name" required>
                         </label>
                     </div>
                     <div class="input clearfix">
                         <label for="last_name">
-                            <input type="text" required="true" name="last_name" placeholder="Apellido" ng-model="contact.lastName" required>
+                            <input type="text" required="true" name="last_name" placeholder="Apellido" ng-model="contact.last_name" required>
                         </label>
                     </div>
                     <div class="input clearfix">
@@ -29,7 +29,7 @@
                         </label>
                     </div>
                     <div class="input clearfix">
-                        <input type="submit" name="submit-button" class="quiero-mi-pelo">
+                        <input type="submit" name="submit-button" class="quiero-mi-pelo" ng-disabled="!contactForm.$valid">
                     </div>
                 </fieldset>
             </form>
