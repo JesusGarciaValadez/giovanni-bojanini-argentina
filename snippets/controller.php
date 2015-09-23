@@ -17,7 +17,19 @@ if ( !empty( $action ) )
                 $data[ "city" ]         = stripslashes ( strip_tags( trim( $_POST[ 'city' ] ) ) );
                 $data[ "message" ]      = stripslashes ( strip_tags( trim( $_POST[ 'message' ] ) ) );
 
-                $_SESSION[ 'email' ]    = $data[ "email" ];
+                $locationSuccess    = SITE_URL . 'gracias.php';
+                switch ( $data[ "form_id" ] ) {
+                    case 'mujer':
+                        $locationFail       = SITE_URL . 'mujer.html';
+                        break;
+                    case 'hombre':
+                        $locationFail       = SITE_URL . 'hombre.html';
+                        break;
+                    case 'generico':
+                    default:
+                        $locationFail       = SITE_URL;
+                        break;
+                }
 
                 /*
                 $cc = array(
@@ -88,20 +100,22 @@ if ( !empty( $action ) )
                     if ( $userSaved )
                     {
                         $response = $contact->sendEmail( );
-                        header( 'Location: ' . SITE_URL . 'gracias.php?email=' . $data[ "email" ] );
+                        $_SESSION[ 'email' ]    = $data[ "email" ];
+                        $_SESSION[ 'template' ] = $data[ "form_id" ];
+                        header( 'Location: ' . $locationSuccess );
                     }
                     else
                     {
-                        header( 'Location: ' . SITE_URL );
+                        header( 'Location: ' . $locationFail );
                     }
                 }
                 else
                 {
-                    header( 'Location: ' . SITE_URL );
+                    header( 'Location: ' . $locationFail );
                 }
                 break;
             default:
-                header( 'Location: ' . SITE_URL );
+                header( 'Location: ' . $locationFail );
                 break;
         }
         echo $data;

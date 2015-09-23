@@ -27994,6 +27994,28 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/js\/analytics-men.min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/analytics-men.min.js",
+		"outputAbbreviatedPath": "\/js\/analytics-men.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/analytics-women.min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/analytics-women.min.js",
+		"outputAbbreviatedPath": "\/js\/analytics-women.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/js\/analytics.min.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -86313,6 +86335,32 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/source\/coffeescript\/analytics-men.coffee": {
+		"createSourceMap": 1,
+		"fileType": 32,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/source\/coffeescript\/analytics-men.coffee",
+		"minifyOutput": 1,
+		"outputAbbreviatedPath": "\/js\/analytics-men.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
+		"outputStyle": 0,
+		"syntaxCheckerStyle": 1
+		},
+	"\/source\/coffeescript\/analytics-women.coffee": {
+		"createSourceMap": 1,
+		"fileType": 32,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/source\/coffeescript\/analytics-women.coffee",
+		"minifyOutput": 1,
+		"outputAbbreviatedPath": "\/js\/analytics-women.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
+		"outputStyle": 0,
+		"syntaxCheckerStyle": 1
+		},
 	"\/source\/coffeescript\/analytics.coffee": {
 		"createSourceMap": 1,
 		"fileType": 32,
@@ -86322,7 +86370,7 @@
 		"minifyOutput": 1,
 		"outputAbbreviatedPath": "\/js\/analytics.min.js",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
+		"outputPathIsSetByUser": 1,
 		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
@@ -86498,21 +86546,21 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/source\/kit\/conversion.kit": {
-		"fileType": 2048,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/source\/kit\/conversion.kit",
-		"outputAbbreviatedPath": "\/conversion.html",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/source\/kit\/footer.kit": {
 		"fileType": 2048,
 		"ignore": 1,
 		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/source\/kit\/footer.kit",
 		"outputAbbreviatedPath": "\/footer.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/source\/kit\/head-thanks.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/source\/kit\/head-thanks.kit",
+		"outputAbbreviatedPath": "\/head-thanks.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
@@ -86569,6 +86617,24 @@
 		"outputAbbreviatedPath": "\/scripts.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/source\/kit\/thank-you-men.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/source\/kit\/thank-you-men.kit",
+		"outputAbbreviatedPath": "\/snippets\/libs\/templates\/thank-you-men.tpl",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1
+		},
+	"\/source\/kit\/thank-you-women.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/source\/kit\/thank-you-women.kit",
+		"outputAbbreviatedPath": "\/snippets\/libs\/templates\/thank-you-women.tpl",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1
 		},
 	"\/source\/kit\/thank-you.kit": {
 		"fileType": 2048,
