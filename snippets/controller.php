@@ -7,12 +7,18 @@ if ( !empty( $action ) )
         switch ( $action )
         {
             case 'contact':
-                $data[ "form_id" ]       = stripslashes ( strip_tags( trim( $_POST[ 'formID' ] ) ) );
-                $data[ "first_name" ]    = stripslashes ( strip_tags( trim( $_POST[ 'firstName' ] ) ) );
-                $data[ "last_name" ]     = stripslashes ( strip_tags( trim( $_POST[ 'lastName' ] ) ) );
-                $data[ "email" ]         = stripslashes ( strip_tags( trim( $_POST[ 'email' ] ) ) );
-                $data[ "city" ]          = stripslashes ( strip_tags( trim( $_POST[ 'city' ] ) ) );
-                $data[ "message" ]       = stripslashes ( strip_tags( trim( $_POST[ 'message' ] ) ) );
+                $sessionHandler = ACTUAL_PATH . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'session-handler.php';
+                require_once $sessionHandler;
+
+                $data[ "form_id" ]      = stripslashes ( strip_tags( trim( $_POST[ 'form_id' ] ) ) );
+                $data[ "first_name" ]   = stripslashes ( strip_tags( trim( $_POST[ 'first_name' ] ) ) );
+                $data[ "last_name" ]    = stripslashes ( strip_tags( trim( $_POST[ 'last_name' ] ) ) );
+                $data[ "email" ]        = stripslashes ( strip_tags( trim( $_POST[ 'email' ] ) ) );
+                $data[ "city" ]         = stripslashes ( strip_tags( trim( $_POST[ 'city' ] ) ) );
+                $data[ "message" ]      = stripslashes ( strip_tags( trim( $_POST[ 'message' ] ) ) );
+
+                $_SESSION[ 'email' ]    = $data[ "email" ];
+
                 /*
                 $cc = array(
                     array( 'mail'  => 'jesus.garciav@me.com', 'name'  => 'Jesús' )
@@ -65,7 +71,6 @@ if ( !empty( $action ) )
                             );
                 $config = Common::getConfig();
 
-
                 $formValidated  = new Validator( $data, $rules );
                 if ( $formValidated->validate() )
                 {
@@ -83,24 +88,20 @@ if ( !empty( $action ) )
                     if ( $userSaved )
                     {
                         $response = $contact->sendEmail( );
+                        header( 'Location: ' . SITE_URL . 'gracias.php?email=' . $data[ "email" ] );
                     }
                     else
                     {
-                        $response = false;
+                        header( 'Location: ' . SITE_URL );
                     }
                 }
                 else
                 {
-                    $message    = $formValidated->getMessage();
-                    $contact    = array( 'response' => 'error', 'message' => $message );
+                    header( 'Location: ' . SITE_URL );
                 }
-                $data = json_encode( $response );
                 break;
             default:
-                $data = $response       = array (
-                            'success' => 'false',
-                            'message' => utf8_encode( 'El servidor no sabe que hacer.' )
-                        );
+                header( 'Location: ' . SITE_URL );
                 break;
         }
         echo $data;

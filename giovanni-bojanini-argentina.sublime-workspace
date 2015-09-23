@@ -414,28 +414,30 @@
 	"expanded_folders":
 	[
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina",
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/snippets/libs",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source",
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/javascript",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass/custom-styles",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass/custom-styles/desktop",
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass/custom-styles/mobile"
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass/custom-styles/mobile",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass/default-styles"
 	],
 	"file_history":
 	[
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass/custom-styles/desktop/home.sass",
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit/head.kit",
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit/index.kit",
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit/mujer.kit",
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit/hombre.kit",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit/contact.kit",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/javascript/main.js",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/javascript/plugins.js",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass/custom-styles/mobile/home.sass",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/sass/custom-styles/desktop/home.sass",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit/mujer.kit",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit/index.kit",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit/hombre.kit",
+		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit/head.kit",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/snippets/controller.php",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/snippets/libs/pp.config.ini",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/snippets/config/config.php",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/snippets/libs/Model.php",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/js/main.min.js",
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/kit/contact.kit",
-		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/javascript/main.js",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/source/DB/database.sql",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/snippets/libs/templates/share.tpl",
 		"/Applications/MAMP/htdocs/giovanni-bojanini-argentina/snippets/libs/Contact.php",
@@ -549,8 +551,7 @@
 		"/Applications/MAMP/htdocs/boletin_axa/axa-touch-salud/landings/source/sass/custom-styles/desktop/leche-materna.sass",
 		"/Applications/MAMP/htdocs/boletin_axa/axa-touch-salud/landings/source/sass/custom-styles/desktop/primer-bebe.sass",
 		"/Applications/MAMP/htdocs/boletin_axa/axa-touch-salud/landings/source/sass/default-styles/_general.sass",
-		"/Applications/MAMP/htdocs/anpasa-new/Code/chunks/projectThumbnail.html",
-		"/Applications/MAMP/htdocs/anpasa-new/assets/templates/anpasa/css/catalogo.css"
+		"/Applications/MAMP/htdocs/anpasa-new/Code/chunks/projectThumbnail.html"
 	],
 	"find":
 	{
@@ -808,7 +809,7 @@
 		[
 			[
 				"",
-				"/Applications/MAMP/htdocs/boletin_axa/boletin-axa.sublime-project"
+				"/Applications/MAMP/htdocs/boletin-axa-prevencion-360/source/sass/prevencion-360.sublime-project"
 			],
 			[
 				"boletin",
