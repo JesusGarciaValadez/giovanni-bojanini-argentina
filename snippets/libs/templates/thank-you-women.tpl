@@ -26,7 +26,14 @@
                 <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/980063020/?value=1.00&amp;currency_code=ARS&amp;label=wJRuCPzjswoQrKaq0wM&amp;guid=ON&amp;script=0" />
             </div>
         </noscript>
-
+                <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-61243729-1', 'auto');
+          ga('send', 'pageview');
+        </script>
         <header class="wrapper">
             <div class="central">
                 <h2><a href="https://www.bojanini.com.ar/" title="Giovanni Bojanini" class="clearfix"><img src="https://www.bojanini.com.ar/recupera-mas-que-el-pelo/img/hair-evolution-giovanni-bojanini.png" alt="Hair evolution. Giovanni Bojanini. A head full of possibilities." width="70" height="55"></a></h2>
