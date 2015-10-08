@@ -6,6 +6,8 @@
     display: block
     height: auto
     width: 100%
+    &.general
+        background-position: center top
     &.men
         background-image: url( '../img/background-men.jpg' )
     &.women
@@ -19,7 +21,7 @@
     width: 520px
 header
     .central
-        height: 100px
+        height: 70px
         h2
             display: flex
             flex-flow: stretch
@@ -39,12 +41,12 @@ header
                     align-self: center
 .title
     h1
-        margin: 40px 0 25px 60px
+        margin: 20px 0 12.5px 60px
         img
             margin: 0
             width: auto
 .content
-    padding: 18px 0
+    padding: 5px 0
     .central
         display: block
         margin: 0
@@ -130,18 +132,29 @@ header
     float: right
     margin: 0
 footer
+    bottom: 0
+    left: 0
+    position: fixed !important
     .central
         display: flex
-        flex-align: row nowrap
+        flex-flow: row nowrap
         p
             display: inline-block
             float: left
-            margin: 15px 30px 15px 0
+            line-height: em( 35, 16 )
+            margin: 0 30px 0 0
+            a
+                line-height: em( 35, 16 )
+                padding
             img
+                height: 23px
+                margin: 6px auto
+                width: 280px
         ul
             box-sizing: border-box
             float: right
-            margin: 15px 30px
+            height: 35px
+            margin: 0 30px
             padding: 0
             li
                 box-sizing: border-box
@@ -151,3 +164,6 @@ footer
                 padding: 0
                 a
                     color: transparent
+                    display: block
+                    height: 100%
+                    width: 100%
