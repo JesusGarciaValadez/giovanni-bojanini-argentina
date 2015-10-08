@@ -45,8 +45,8 @@
         </section>
         <section class="wrapper content">
             <div class="central clearfix">
-                <h1>Gracias por compartirnos tu información.</h1>
-                <p>Apartír de hoy recibirás información exclusiva con beneficios de los tratamientos de Giovanni Bojanini.</p>
+                <h1>Muchas gracias por confiar en nosotros.</h1>
+                <p>En breve nos estaremos comunicando para brindarte mayor información y agendar una cita con un especialista</p>
             </div>
         </section>
         <footer class="wrapper">
