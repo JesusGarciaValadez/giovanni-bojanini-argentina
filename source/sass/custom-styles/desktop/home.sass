@@ -18,7 +18,7 @@
     position: relative
     width: 500px
 .contact .central
-    width: 520px
+    width: 595px
 header
     .central
         height: 70px
@@ -94,18 +94,20 @@ header
         flex-flow: row nowrap
         height: 24.673439768vh // 170px
         margin: 33px 0 41px
-        width: 417px
         fieldset
             &:nth-child( 1 ), &:nth-child( 2 )
                 padding: 0
             &:nth-child( 1 )
                 width: 217px
             &:nth-child( 2 )
-                width: 303px
+                display: flex
+                flex-flow: column nowrap
+                width: 380px
                 .input
+                    width: 215px
                     &:nth-child( 2 )
-                        float: left
-                        width: 200px
+                        align-self: flex-start
+                        width: 160px
             .input
                 &:nth-child( 0 ), &:nth-child( 1 ), &:nth-child( 2 )
                     float: left
