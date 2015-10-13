@@ -8,10 +8,10 @@ require_once $sessionHandler;
 
 switch ( $_SESSION[ "template" ] ) {
     case 'mujer':
-        $locationFail       = SITE_URL . 'mujer.html';
+        $locationFail       = SITE_URL . 'mujer';
         break;
     case 'hombre':
-        $locationFail       = SITE_URL . 'hombre.html';
+        $locationFail       = SITE_URL . 'hombre';
         break;
     case 'generico':
     default:

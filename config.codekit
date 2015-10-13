@@ -27646,11 +27646,11 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/hombre.html": {
+	"\/hombre.php": {
 		"fileType": 8192,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/hombre.html",
+		"inputAbbreviatedPath": "\/hombre.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -27985,11 +27985,11 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/index.html": {
+	"\/index.php": {
 		"fileType": 8192,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/index.html",
+		"inputAbbreviatedPath": "\/index.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -28049,11 +28049,11 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/mujer.html": {
+	"\/mujer.php": {
 		"fileType": 8192,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/mujer.html",
+		"inputAbbreviatedPath": "\/mujer.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -86308,33 +86308,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/source\/chunks\/menu-list-item.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/source\/chunks\/menu-list-item.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/source\/chunks\/shelf-list-item.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/source\/chunks\/shelf-list-item.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/source\/chunks\/shelf-list.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/source\/chunks\/shelf-list.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/source\/coffeescript\/analytics-men.coffee": {
 		"createSourceMap": 1,
 		"fileType": 32,
@@ -86596,7 +86569,7 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/source\/kit\/hombre.kit",
-		"outputAbbreviatedPath": "\/hombre.html",
+		"outputAbbreviatedPath": "\/snippets\/libs\/templates\/hombre.tpl",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1
 		},
@@ -86605,7 +86578,7 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/source\/kit\/index.kit",
-		"outputAbbreviatedPath": "\/index.html",
+		"outputAbbreviatedPath": "\/snippets\/libs\/templates\/index.tpl",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1
 		},
@@ -86614,7 +86587,7 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/source\/kit\/mujer.kit",
-		"outputAbbreviatedPath": "\/mujer.html",
+		"outputAbbreviatedPath": "\/snippets\/libs\/templates\/mujer.tpl",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1
 		},

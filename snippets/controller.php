@@ -17,13 +17,13 @@ if ( !empty( $action ) )
                 $data[ "city" ]         = stripslashes ( strip_tags( trim( $_POST[ 'city' ] ) ) );
                 $data[ "message" ]      = stripslashes ( strip_tags( trim( $_POST[ 'message' ] ) ) );
 
-                $locationSuccess    = SITE_URL . 'gracias.php';
+                $locationSuccess    = SITE_URL . 'gracias';
                 switch ( $data[ "form_id" ] ) {
                     case 'mujer':
-                        $locationFail       = SITE_URL . 'mujer.html';
+                        $locationFail       = SITE_URL . 'mujer';
                         break;
                     case 'hombre':
-                        $locationFail       = SITE_URL . 'hombre.html';
+                        $locationFail       = SITE_URL . 'hombre';
                         break;
                     case 'generico':
                     default:
