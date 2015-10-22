@@ -27503,6 +27503,15 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/conversion-general.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/conversion-general.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/css\/fonts\/open-sans-condensed-bold\/OpenSans-CondBold-demo.html": {
 		"fileType": 8192,
 		"ignore": 0,

@@ -26,7 +26,19 @@
           ga('create', 'UA-61243729-1', 'auto');
           ga('send', 'pageview');
         </script>
-        <script src="https://www.bojanini.com.ar/recupera-mas-que-el-pelo/js/analytics-women.min.js"></script>
+        <!-- Google Code for Landing Generica Conversion Page -->
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var google_conversion_id = 980063020;
+            var google_conversion_language = "en";
+            var google_conversion_format = "2";
+            var google_conversion_color = "ffffff";
+            var google_conversion_label = "wJRuCPzjswoQrKaq0wM";
+            var google_conversion_value = 1.00;
+            var google_conversion_currency = "ARS";
+            var google_remarketing_only = false;
+        /* ]]> */
+        </script>
         <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
     </head>
     <body class="giovanni-bojanini women thank-you" ng-app="BojaApp">
