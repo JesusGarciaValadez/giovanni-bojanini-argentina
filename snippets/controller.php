@@ -15,6 +15,7 @@ if ( !empty( $action ) )
                 $data[ "last_name" ]    = stripslashes ( strip_tags( trim( $_POST[ 'last_name' ] ) ) );
                 $data[ "email" ]        = stripslashes ( strip_tags( trim( $_POST[ 'email' ] ) ) );
                 $data[ "city" ]         = stripslashes ( strip_tags( trim( $_POST[ 'city' ] ) ) );
+                $data[ "phone" ]         = stripslashes ( strip_tags( trim( $_POST[ 'phone' ] ) ) );
                 $data[ "message" ]      = stripslashes ( strip_tags( trim( $_POST[ 'message' ] ) ) );
 
                 $locationSuccess    = SITE_URL . 'gracias';
@@ -75,10 +76,15 @@ if ( !empty( $action ) )
                                     'validador' => 'esAlfaNumerico',
                                     'mensaje'   => utf8_encode( 'La cuarta pregunta es obligatoria.' )
                                 ),
+                                'phone' => array(
+                                    'requerido' => 1,
+                                    'validador' => 'esNumerico',
+                                    'mensaje'   => utf8_encode( 'La quinta pregunta es obligatoria.' )
+                                ),
                                 'message' => array(
                                     'requerido' => 1,
                                     'validador' => 'esAlfaNumerico',
-                                    'mensaje'   => utf8_encode( 'La quinta pregunta es obligatoria.' )
+                                    'mensaje'   => utf8_encode( 'La sexta pregunta es obligatoria.' )
                                 )
                             );
                 $config = Common::getConfig();
