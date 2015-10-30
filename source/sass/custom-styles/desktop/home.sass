@@ -108,9 +108,15 @@ header
                     &:nth-child( 2 )
                         align-self: flex-start
                         width: 160px
+            &:nth-child( 3 )
+                padding: 0
             .input
-                &:nth-child( 0 ), &:nth-child( 1 ), &:nth-child( 2 )
+                // &:nth-child( 0 ), &:nth-child( 1 ), &:nth-child( 2 )
+                //     float: left
+                &.medium
                     float: left
+                &.complete
+                    float: none
                 label
                     float: left
                     margin: 0 17px 17px 0
@@ -120,10 +126,10 @@ header
                     &[for="first_name"]
                         margin-right: 10px
                     &[for="message"]
-                        height: 120px
+                        height: 75px
                     input[type="text"], input[type="email"], textarea
                         font-size: em( 13, 16 )
-                    input[type="text"], input[type="email"]
+                    input[type="text"], input[type="email"], input[type="tel"]
                         height: 28px
                     textarea
                         height: 100%

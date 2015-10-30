@@ -72,33 +72,41 @@
             <form name="contactForm" action="gateway.php?action=contact" method="POST" class="central contact-form" novalidate ng-submit="contactForm.$valid && form.submitForm( $event )">
                 <fieldset class="clearfix">
                     <input type="hidden" name="form_id" ng-model="contact.form_id" value="generico">
-                    <div class="input clearfix">
+                    <div class="input medium clearfix">
                         <label for="first_name">
                             <input type="text" required="true" name="first_name" placeholder="Nombre" ng-model="contact.first_name" required>
                         </label>
                     </div>
-                    <div class="input clearfix">
+                    <div class="input medium clearfix">
                         <label for="last_name">
                             <input type="text" required="true" name="last_name" placeholder="Apellido" ng-model="contact.last_name" required>
                         </label>
                     </div>
-                    <div class="input clearfix">
+                    <div class="input complete clearfix">
                         <label for="email">
                             <input type="email" required="true" name="email" placeholder="Correo Electrónico" ng-model="contact.email" required>
-                    </label></div>
-                    <div class="input clearfix">
+                        </label>
+                    </div>
+                    <div class="input complete clearfix">
                         <label for="city">
                             <input type="text" required="true" name="city" placeholder="Ciudad" ng-model="contact.city" required>
                         </label>
                     </div>
                 </fieldset>
                 <fieldset class="clearfix">
-                    <div class="input clearfix">
+                    <div class="input medium clearfix">
+                        <label for="phone">
+                            <input type="tel" required="true" name="phone" placeholder="Teléfono" ng-model="contact.phone" required>
+                        </label>
+                    </div>
+                    <div class="input medium clearfix">
                         <label for="message">
                             <textarea name="message" id="" cols="30" rows="10" placeholder="Mensaje" ng-model="contact.message" required></textarea>
                         </label>
                     </div>
-                    <div class="input clearfix">
+                </fieldset>
+                <fieldset class="clearfix">
+                    <div class="input medium clearfix">
                         <input type="submit" name="submit-button" class="quiero-mi-pelo" ng-disabled="!contactForm.$valid">
                     </div>
                 </fieldset>
