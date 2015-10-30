@@ -3,4 +3,5 @@
 <p><strong>Apellidos: </strong>[+last_name+]</p>
 <p><strong>Email: </strong>[+email+]</p>
 <p><strong>Ciudad: </strong>[+city+]</p>
+<p><strong>Teléfono: </strong>[+phone+]</p>
 <p><strong>Mensaje: </strong>[+message+]</p>
